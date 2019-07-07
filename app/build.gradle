@@ -5,9 +5,6 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.github.kt3k.coveralls'
 apply plugin: 'jacoco'
 
-jacoco {
-    reportsDir = file("${buildDir}/reports")
-}
 
 task coverageReport(type: JacocoReport, dependsOn: 'testDebugUnitTest') {
     group = "Reporting"

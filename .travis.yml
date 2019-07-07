@@ -37,5 +37,6 @@ env:
 
 script:
   - ./gradlew --no-daemon --parallel lintDebug testDebug
-  - ./gradlew :app:coverageReport
-  - ./gradlew --info coveralls
+
+after_success:
+  - ./gradlew jacocoTestReport coveralls

@@ -33,7 +33,9 @@ install:
 
 env:
   - ANDROID_HOME=$HOME/android-sdk
+  - CI_NAME=travis-ci
 
 script:
   - ./gradlew --no-daemon --parallel lintDebug testDebug
-  - ./gradlew :app:coverageReport coveralls
+  - ./gradlew :app:coverageReport
+  - ./gradlew --info coveralls

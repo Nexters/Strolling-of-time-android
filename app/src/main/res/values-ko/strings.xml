@@ -1,0 +1,43 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">시간의 산책</string>
+    <string name="coming_soon">Coming soon!</string>
+    <string name="timer" tools:keep="@string/timer">Timer</string>
+    <string name="history" tools:keep="@string/history">History</string>
+    <string name="setting" tools:keep="@string/setting">Setting</string>
+    <string name="license" tools:keep="@string/license">License</string>
+    <string name="timer_start" tools:keep="@string/timer_start">타이머 시작</string>
+    <string name="timer_stop" tools:keep="@string/timer_stop">타이머 중지</string>
+    <string name="ok" tools:keep="@string/ok">확인</string>
+    <string name="cancel" tools:keep="@string/cancel">취소</string>
+    <string name="how_many_seconds_do_you_want_to_set" tools:keep="@string/how_many_seconds_do_you_want_to_set">몇 초를 설정하시겠습니까? (기본값: 1시간)</string>
+    <string name="feel_the_flow_of_time" tools:keep="@string/feel_the_flow_of_time">시간의 흐름을 느껴보세요</string>
+    <string name="concentration_timer" tools:keep="@string/concentration_timer">집중 타이머</string>
+    <string name="touch_me" tools:keep="@string/touch_me">눌러주세요 !</string>
+    <string name="what_did_you_do_during_your_time_stroll" tools:keep="@string/what_did_you_do_during_your_time_stroll">시간의 산책 중에 무엇을 했나요?</string>
+    <string name="record" tools:keep="@string/record">기록하기</string>
+    <string name="what_are_you_doing" tools:keep="@string/what_are_you_doing">무엇을 하고 있나요?</string>
+    <string name="please_input" tools:keep="@string/please_input">입력해주세요</string>
+    <string-array name="wise_sayings_of_time" tools:ignore="InconsistentArrays">
+        <item>시간을 지배할 줄 아는 사람은 인생을 지배할 줄 아는 사람이다\n- 에센바흐</item>
+        <item>짧은 인생은 시간낭비에 의해 더욱 짧아진다.\n- S. 존슨</item>
+        <item>시간을 단축시키는 것은 활동이요, 시간을 견디지 못하게 하는 것은 안일함이다.\n- 괴테</item>
+        <item>미래를 신뢰하지 마라, \n죽은 과거는 묻어버려라, \n그리고 살아있는 현재에 행동하라.\n- 롱펠로</item>
+        <item>계획이란 미래에 관한 현재의 결정이다.\n- 드래커</item>
+        <item>시간을 선택하는 것은 시간을 절약하는 것이다.\n- 베이컨</item>
+        <item>시간이 덜어주거나 부드럽게 해주지 않는 슬픔이란 하나도 없다.\n- 키케로</item>
+        <item>가장 바쁜 사람이 가장 많은 시간을 갖는다.\n부지런히 노력하는 사람이 결국 많은 대가를 받는다.\n- 알렉산드리아 피네</item>
+        <item>변명 중에서도 가장 어리석고 못난 변명은 "시간이 없어서"라는 변명이다.\n- 에디슨</item>
+        <item>사랑은 금전을 시간보다 중히 여기지만, 그로 인해 잃어버린 시간은 금전으론 살 수 없다. -유태격언</item>
+        <item>삼십 분이란 티끌과 같은 시간이라고 말하지 말고, 그 동안이라도 티끌과 같은 일을 처리하는 것이 현명한 방법이다.\n- 괴테</item>
+        <item>세월은 누구에게나 공평하게 주어진 자본금이다. 이 자본을 잘 이용한 사람에겐 승리가 있다.\n- 아뷰난드</item>
+        <item>승자는 시간을 관리하며 살고, 패자는 시간에 끌려 산다.\n- J.하비스</item>
+        <item>오늘의 식사는 내일로 미루지 않으면서 오늘 할 일은 내일로 미루는 사람이 많다.\n- C. 힐티</item>
+        <item>우리는 일 년 후면 다 잊어버릴 슬픔을 간직하느라고 무엇과도 바꿀 수 없는 소중한 시간을 버리고 있습니다.\n- 데일 카네기</item>
+        <item>전력을 다해서 시간에 대항하라\n- 톨스토이</item>
+        <item>시간은 인간이 소비하는 가장 가치 있는 것이다.\n- 테오프라스토스</item>
+        <item>오늘을 붙들어라. 되도록이면 내일에 의지하지 말라. 그 날 그 날이 일 년 중에서 최선의 날이다.\n- 에머슨</item>
+        <item>시간에 속지 말라, 시간은 정복할 수 없다.\n- W.H.오든</item>
+        <item>미래를 예측하는 최선의 방법은 미래를 창조하는 것이다\n- 알랜 케이</item>
+        <item>나는 미래에 대해 생각하는 법이 없다. 어차피 곧 닥치니까\n- 알버트 아인슈타인</item>
+    </string-array>
+</resources>

@@ -1,0 +1,29 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Strolling of time</string>
+    <string name="coming_soon">Coming soon!</string>
+
+    <string name="timer" tools:keep="@string/timer">Timer</string>
+    <string name="history" tools:keep="@string/history">History</string>
+    <string name="setting" tools:keep="@string/setting">Setting</string>
+    <string name="license" tools:keep="@string/license">License</string>
+    <string name="timer_start" tools:keep="@string/timer_start">Timer start</string>
+    <string name="timer_stop" tools:keep="@string/timer_stop">Timer stop</string>
+    <string name="ok" tools:keep="@string/ok">OK</string>
+    <string name="cancel" tools:keep="@string/cancel">Cancel</string>
+    <string name="how_many_seconds_do_you_want_to_set" tools:keep="@string/how_many_seconds_do_you_want_to_set">How many seconds do you want to set? (default: 1 hour)</string>
+    <string name="feel_the_flow_of_time" tools:keep="@string/feel_the_flow_of_time">Feel the flow of time</string>
+    <string name="concentration_timer" tools:keep="@string/concentration_timer">Concentration timer</string>
+    <string name="touch_me" tools:keep="@string/touch_me">CLICK ME !</string>
+    <string name="what_did_you_do_during_your_time_stroll" tools:keep="@string/what_did_you_do_during_your_time_stroll">What did you do while strolling of a time?</string>
+    <string name="record" tools:keep="@string/record">Record</string>
+    <string name="what_are_you_doing" tools:keep="@string/what_are_you_doing">What are you doing?</string>
+    <string name="please_input" tools:keep="@string/please_input">Please input</string>
+    <string-array name="wise_sayings_of_time" tools:ignore="InconsistentArrays">
+        <item>This time, like all times, is a very good done, if we but know what to do with it. \n- Ralph Waldo Emerson</item>
+        <item>The best way to predict the future is to invent it \n- Alan kay</item>
+        <item>A single day is enough to make us a little larger \n- Paul Klee</item>
+        <item>I never think of the future, it comes soon enough. \n- Albert Einstein</item>
+        <item>He who knows how to rule time is the one who knows how to control life. \n- Eschenbach</item>
+        <item>Short life is shortened by waste of time. \n- S. Johnson</item>
+    </string-array>
+</resources>

@@ -34,4 +34,6 @@ install:
 env:
   - ANDROID_HOME=$HOME/android-sdk
 
-script: ./gradlew --no-daemon --parallel lintDebug testDebug
+script:
+  - ./gradlew --no-daemon --parallel lintDebug testDebug
+  - ./gradlew :app:coverageReport coveralls

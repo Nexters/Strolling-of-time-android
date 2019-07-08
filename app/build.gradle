@@ -37,7 +37,7 @@ android {
 }
 
 coveralls {
-    jacocoReportPath 'build/reports/jacoco/jacocoTestDebugUintTestReport/jacocoTestDebugUnitTestReport.xml'
+    jacocoReportPath 'build/reports/jacoco/jacocoTestDebugUnitTestReport/jacocoTestDebugUnitTestReport.xml'
 }
 
 dependencies {

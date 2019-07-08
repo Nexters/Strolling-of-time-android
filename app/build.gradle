@@ -39,6 +39,9 @@ android {
 coveralls {
     jacocoReportPath 'build/reports/jacoco/jacocoTestDebugUnitTestReport/jacocoTestDebugUnitTestReport.xml'
 }
+jacocoAndroidUnitTestReport {
+    excludes += ['**/views/**']
+}
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])

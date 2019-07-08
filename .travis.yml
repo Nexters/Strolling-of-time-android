@@ -32,7 +32,7 @@ install:
   - echo y | $HOME/android-sdk/tools/bin/sdkmanager 'platforms;android-28' > /dev/null
 
 env:
-  - ANDROID_HOME=$HOME/android-sdk
+  - ANDROID_HOME=$HOME/android-sdk CI_NAME=travis CI_BUILD_NUMBER=$TRAVIS_BUILD_NUMBER CI_BUILD_URL=$TRAVIS_BUILD_WEB_URL CI_BRANCH=$TRAVIS_BRANCH
 
 script:
   - ./gradlew --no-daemon --parallel lintDebug testDebug

@@ -34,6 +34,12 @@ install:
 env:
   - ANDROID_HOME=$HOME/android-sdk CI_NAME=travis CI_BUILD_NUMBER=$TRAVIS_BUILD_NUMBER CI_BUILD_URL=$TRAVIS_BUILD_WEB_URL CI_BRANCH=$TRAVIS_BRANCH
 
+before_script:
+  - echo $CI_NAME
+  - echo $CI_BUILD_NUMBER
+  - echo $CI_BUILD_URL
+  - echo $CI_BRANCH
+
 script:
   - ./gradlew --no-daemon --parallel lintDebug testDebug
 

@@ -33,7 +33,7 @@ install:
 
 # https://github.com/kt3k/coveralls-gradle-plugin
 env:
-  - ANDROID_HOME=$HOME/android-sdk CI_NAME=travis-ci CI_BUILD_NUMBER=$TRAVIS_BUILD_NUMBER CI_BUILD_URL=$TRAVIS_BUILD_WEB_URL CI_BRANCH=$TRAVIS_BRANCH
+  - ANDROID_HOME=$HOME/android-sdk
 
 before_script:
   - echo $CI_NAME

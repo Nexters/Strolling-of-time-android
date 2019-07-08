@@ -4,13 +4,14 @@ buildscript {
     repositories {
         google()
         jcenter()
-        
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.4.1'
         classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.8.2'
+        classpath 'com.dicedmelon.gradle:jacoco-android:0.1.4'
     }
 }
+
 
 allprojects {
     repositories {

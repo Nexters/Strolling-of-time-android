@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="et_placeholder_size">16sp</dimen>
+    <dimen name="button_font_size">18sp</dimen>
+
+    <dimen name="toolbar_font_size">16sp</dimen>
+    <dimen name="tv_button_font_size">14sp</dimen>
+    <dimen name="tv_font_size">18sp</dimen>
+
+
+    <dimen name="md_bottom_sheet_separator_top_margin">7dp</dimen>
+</resources>

@@ -6,4 +6,10 @@
     <color name="korean_flag_red" tools:keep="@color/korean_flag_red">#C01028</color>
     <color name="korean_flag_blue" tools:keep="@color/korean_flag_blue">#0C3778</color>
     <color name="main_color">#46AAF2</color>
+
+    <color name="button_color">#EEEEEE</color>
+    <color name="button_text">#BDBDBD</color>
+    <color name="colorPrimaryDark">#E0E0E0</color>
+    <color name="main_default">#fff9ee</color>
+    <color name="black">#000000</color>
 </resources>

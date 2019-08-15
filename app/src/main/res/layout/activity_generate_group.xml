@@ -81,7 +81,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:layout_marginBottom="@dimen/dp_8"
+            android:layout_marginBottom="8dp"
 
             android:layout_marginTop="@dimen/md_bottom_sheet_separator_top_margin"
             android:background="@color/colorPrimaryDark"/>
@@ -149,7 +149,7 @@
         android:layout_weight="0.1"
         android:layout_gravity="bottom"
         android:background="@color/colorPrimaryDark"
-        android:text="@string/create_group"
+        android:text=""
         android:textColor="@color/button_text"
         android:textSize="@dimen/button_font_size"
         android:textStyle="bold"/>

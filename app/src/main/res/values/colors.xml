@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <color name="tab_active" tools:keep="@color/tab_active">#00B8D4</color>
-    <color name="tab_inactive" tools:keep="@color/tab_inactive">#d8d8d8</color>
-    <color name="prev_color" tools:keep="@color/prev_color">#d8d8d8</color>
-    <color name="korean_flag_red" tools:keep="@color/korean_flag_red">#C01028</color>
-    <color name="korean_flag_blue" tools:keep="@color/korean_flag_blue">#0C3778</color>
-    <color name="main_color">#46AAF2</color>
+<color name="tab_active" tools:keep="@color/tab_active">#00B8D4</color>
+<color name="tab_inactive" tools:keep="@color/tab_inactive">#d8d8d8</color>
+<color name="prev_color" tools:keep="@color/prev_color">#d8d8d8</color>
+<color name="korean_flag_red" tools:keep="@color/korean_flag_red">#C01028</color>
+<color name="korean_flag_blue" tools:keep="@color/korean_flag_blue">#0C3778</color>
+<color name="main_color">#46AAF2</color>
+<!--<color name="colorPrimary">#FBFBFB</color>-->
+<color name="colorPrimaryDark">#E0E0E0</color>
+<color name="main_default">#fff9ee</color>
+<color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
 </resources>

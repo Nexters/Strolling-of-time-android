@@ -13,17 +13,30 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".views.LauncherActivity"
-            android:launchMode="singleTop">
+        <activity android:name=".views.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".views.main.MainActivity"
-            android:windowSoftInputMode="adjustPan"/>
+
+        <activity android:name=".views.group.GroupMainActivity" android:parentActivityName=".views.main.MainActivity">
+
+        </activity>
+
+        <!--<activity android:name=".views.LauncherActivity"-->
+            <!--android:launchMode="singleTop">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        <!--</activity>-->
+        <!--<activity android:name=".views.main.MainActivity"-->
+            <!--android:windowSoftInputMode="adjustPan"/>-->
 
     </application>
+
 
 </manifest>

@@ -6,7 +6,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.4.1'
+        classpath 'com.android.tools.build:gradle:3.4.2'
         classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.8.2'
         classpath 'com.dicedmelon.gradle:jacoco-android:0.1.4'
     }
@@ -17,7 +17,12 @@ allprojects {
     repositories {
         google()
         jcenter()
-        
+        maven {
+            url "https://repo.eclipse.org/content/repositories/paho-snapshots/"
+        }
+        maven {
+            url "https://jitpack.io"
+        }
     }
 }
 

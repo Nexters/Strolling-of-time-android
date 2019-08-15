@@ -19,16 +19,6 @@
             android:layout_height="match_parent"
             android:orientation="horizontal"
             android:weightSum="1">
-            <com.mikepenz.iconics.view.IconicsImageView
-                android:id="@+id/back_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:gravity="center"
-                android:singleLine="true"
-                android:textColor="#ffffff"
-                android:textSize="16sp"
-                android:visibility="visible" />
 
             <EditText
                 android:id="@+id/txt_main_title"
@@ -45,17 +35,6 @@
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-
-            <com.mikepenz.iconics.view.IconicsImageView
-                android:id="@+id/search_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="20dp"
-                android:gravity="center"
-                android:singleLine="true"
-                android:textColor="#ffffff"
-                android:textSize="16sp"
-                android:visibility="visible" />
         </android.support.constraint.ConstraintLayout>
     </android.support.v7.widget.Toolbar>
 

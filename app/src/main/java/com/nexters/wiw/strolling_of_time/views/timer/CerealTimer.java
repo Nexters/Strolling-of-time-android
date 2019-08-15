@@ -23,8 +23,6 @@ public class CerealTimer extends AppCompatActivity {
   protected void onCreate(@Nullable Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_cereal_timer);
-    fadeInAnimation = AnimationUtils.loadAnimation(this, R.anim.in_animation);
-    fadeOutAnimation = AnimationUtils.loadAnimation(this, R.anim.out_animation);
     initBottomSheet();
     initCerealTimer();
   }

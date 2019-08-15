@@ -16,9 +16,6 @@ import com.nexters.wiw.strolling_of_time.R;
 
 
 public class CerealTimer extends AppCompatActivity {
-  private Animation fadeInAnimation, fadeOutAnimation;
-
-
   @Override
   protected void onCreate(@Nullable Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -46,19 +43,12 @@ public class CerealTimer extends AppCompatActivity {
     Button pauseButton = findViewById(R.id.cereal_timer_pause);
     TextView estimateLabel = findViewById(R.id.cereal_timer_estimate_time_label);
     TextView estimateTime = findViewById(R.id.cereal_timer_estimate_time);
-//    ViewRevealAnimator mViewAnimator = findViewById(R.id.animator);
 
     cerealTimerButton.setOnCheckedChangeListener((compoundButton, running) -> {
       int visibility = running ? View.VISIBLE : View.GONE;
       int backgroundColor = running ? R.color.cereal_timer_running_color_background : R.color.cereal_timer_ready_color_background;
       int resBackgroundTextColor = running ? R.color.cereal_timer_ready_color_background : R.color.cereal_timer_running_color_background;
       int backgroundTextColor = getResources().getColor(resBackgroundTextColor);
-
-//      if (running){
-//        mViewAnimator.showNext();
-//      } else {
-//        mViewAnimator.showPrevious();
-//      }
 
       pauseButton.setVisibility(visibility);
       cerealTimerBackground.setBackgroundResource(backgroundColor);

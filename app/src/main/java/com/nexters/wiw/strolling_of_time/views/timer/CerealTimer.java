@@ -1,5 +1,6 @@
 package com.nexters.wiw.strolling_of_time.views.timer;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.BottomSheetDialogFragment;
@@ -10,8 +11,12 @@ import android.widget.TextView;
 
 import com.nexters.wiw.strolling_of_time.R;
 
+import static com.nexters.wiw.strolling_of_time.R.drawable.cereal_timer_success;
+
 public class CerealTimer extends AppCompatActivity {
     private boolean running = false;
+    private int percentage = 0;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,12 +46,11 @@ public class CerealTimer extends AppCompatActivity {
 
         TextView readyText = findViewById(R.id.tv_ready);
 
-        TextView estimateTimePercent = findViewById(R.id.tv_running_percent);
+        TextView runningPercent = findViewById(R.id.tv_running_percent);
         TextView totalRunningTime = findViewById(R.id.tv_total_running_time);
         TextView percentMark = findViewById(R.id.percent_mark);
 
         cerealTimerButton.setOnClickListener(v -> {
-
             running = !running;
             int visibility = running ? View.VISIBLE : View.GONE;
             int backgroundColor = running ? R.color.cereal_timer_running_color_background : R.color.cereal_timer_ready_color_background;
@@ -54,7 +58,7 @@ public class CerealTimer extends AppCompatActivity {
             int backgroundTextColor = getResources().getColor(resBackgroundTextColor);
 
             pauseButton.setVisibility(visibility);
-            estimateTimePercent.setVisibility(visibility);
+            runningPercent.setVisibility(visibility);
             totalRunningTime.setVisibility(visibility);
             percentMark.setVisibility(visibility);
 
@@ -63,6 +67,16 @@ public class CerealTimer extends AppCompatActivity {
             cerealTimerBackground.setBackgroundResource(backgroundColor);
             estimateLabel.setTextColor(backgroundTextColor);
             estimateTime.setTextColor(backgroundTextColor);
+
+            // TODO: 타이머 시간 흐르는 것으로 변경
+            runningPercent.setText(String.format("%d", percentage));
+            if(percentage >= 100) {
+                cerealTimerButton.setBackground(getResources().getDrawable(cereal_timer_success));
+                totalRunningTime.setTextColor(Color.WHITE);
+            }
+            if(running) {
+                percentage += 10;
+            }
         });
     }
 }

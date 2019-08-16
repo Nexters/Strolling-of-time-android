@@ -8,27 +8,8 @@
     android:orientation="vertical"
     android:background="@drawable/arc_bottom_sheet"
     android:paddingTop="30dp">
-    <!--<android.support.v7.widget.RecyclerView-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content">-->
-
-    <!--</android.support.v7.widget.RecyclerView>-->
-    <TextView
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/coworker_list"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="김리얼"
-        android:textSize="18sp"
-        android:layout_margin="20dp"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="김리얼"
-        android:textSize="18sp"
-        android:layout_margin="20dp"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="김리얼"
-        android:textSize="18sp"
-        android:layout_margin="20dp"/>
+        android:layout_height="wrap_content"/>
 </LinearLayout>

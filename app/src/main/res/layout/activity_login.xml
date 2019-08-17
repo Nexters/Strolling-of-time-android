@@ -9,14 +9,14 @@
     android:orientation="vertical">
 
     <!--<com.nexters.wiw.strolling_of_time.MainToolbar-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:minHeight="?attr/actionBarSize"-->
-        <!--android:background="?attr/colorPrimaryDark"-->
-        <!--android:fitsSystemWindows="true"-->
-        <!--app:contentInsetLeft="0dp"-->
-        <!--app:contentInsetStart="0dp"-->
-        <!--/>-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:minHeight="?attr/actionBarSize"-->
+    <!--android:background="?attr/colorPrimaryDark"-->
+    <!--android:fitsSystemWindows="true"-->
+    <!--app:contentInsetLeft="0dp"-->
+    <!--app:contentInsetStart="0dp"-->
+    <!--/>-->
 
 
     <android.support.constraint.ConstraintLayout

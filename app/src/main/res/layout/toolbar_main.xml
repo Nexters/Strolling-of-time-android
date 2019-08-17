@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="?attr/actionBarSize"
-        android:background="@color/main_default"
+        android:background="@color/white"
         android:fitsSystemWindows="true"
         app:contentInsetLeft="0dp"
         app:contentInsetStart="0dp">
@@ -22,23 +22,24 @@
             android:id="@+id/txt_left_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
             android:gravity="center"
             android:singleLine="true"
             android:text="Cereal"
             android:textColor="#404040"
             android:textSize="16sp"
             android:textStyle="bold"
-            android:visibility="visible" />
+            android:visibility="visible"
+            android:layout_gravity="center"/>
 
 
 
         <TextView
+            android:background="@drawable/ic_search"
             android:id="@+id/txt_right_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_gravity="right"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="29dp"
             android:gravity="center"
             android:textColor="#f6d4d5"
             android:textSize="16sp"

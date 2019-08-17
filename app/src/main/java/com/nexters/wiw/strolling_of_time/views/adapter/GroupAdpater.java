@@ -25,7 +25,7 @@ public class GroupAdpater extends CursorAdapter {
 
     @Override
     public View newView(Context context, Cursor cursor, ViewGroup parent) {
-        View listItemLayout = inflater.inflate(R.layout.mission_item, parent, false);
+        View listItemLayout = inflater.inflate(R.layout.activity_main_list, parent, false);
         return listItemLayout;
     }
 

@@ -1,6 +1,6 @@
 package com.nexters.wiw.strolling_of_time.models;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import java.util.concurrent.TimeUnit;
 

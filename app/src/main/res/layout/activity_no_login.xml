@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.main.MainActivity"
+    android:orientation="vertical">
+
+    <!--<com.nexters.wiw.strolling_of_time.MainToolbar-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:minHeight="?attr/actionBarSize"-->
+    <!--android:background="?attr/colorPrimaryDark"-->
+    <!--android:fitsSystemWindows="true"-->
+    <!--app:contentInsetLeft="0dp"-->
+    <!--app:contentInsetStart="0dp"-->
+    <!--/>-->
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3.5"
+        android:background="#ffffffff"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="28sp"
+            android:textColor="@color/black"
+            android:lineSpacingExtra="9sp"
+            android:text="안녕하세요\n처음이신가요?"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="87dp"
+            android:layout_marginLeft="30dp"
+            />
+
+        <ImageButton
+            android:id="@+id/btn_no_login"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/login_square"
+            android:radius="32dp"
+            android:text="로그인"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="63dp"/>
+
+        <TextView
+            android:id="@+id/tv_if_sign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:text="회원이 아니신가요?"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="26dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="115dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginBottom="26dp"
+            android:text="가입하기"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/tv_if_sign" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>

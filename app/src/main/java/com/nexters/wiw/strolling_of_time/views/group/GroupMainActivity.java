@@ -1,5 +1,6 @@
 package com.nexters.wiw.strolling_of_time.views.group;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
@@ -28,20 +29,18 @@ public class GroupMainActivity extends AppCompatActivity {
     private static final ArrayList<ArrayList<HashMap<String,String>>> childItems = new ArrayList<ArrayList<HashMap<String,String>>>(); // 자식 리스트
     private int groupPosi;
     private int childPosi;
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_group_main);
 
-        ListView lv_group_list = (ListView)findViewById(R.id.lv_group_list);
-        ScrollView group_scroll = (ScrollView)findViewById(R.id.group_scroll);
+        ListView lv_group_list = findViewById(R.id.lv_group_list);
+        ScrollView group_scroll = findViewById(R.id.group_scroll);
 
-        lv_group_list.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                group_scroll.requestDisallowInterceptTouchEvent(true);
-                return false;
-            }
+        lv_group_list.setOnTouchListener((view, motionEvent) -> {
+            group_scroll.requestDisallowInterceptTouchEvent(true);
+            return false;
         });
 
 

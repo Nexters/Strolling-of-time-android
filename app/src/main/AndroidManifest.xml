@@ -20,7 +20,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+      
+        <activity android:name=".views.timer.CerealTimer"/>
         <activity android:name=".views.group.GroupMainActivity" android:parentActivityName=".views.main.MainActivity" />
         <activity android:name=".views.group.MakeMissionActivity" android:parentActivityName=".views.group.GroupMainActivity" />
         <activity android:name=".views.user.LoginActivity" android:parentActivityName=".views.user.NoLoginActivity" />

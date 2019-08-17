@@ -5,6 +5,10 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.github.kt3k.coveralls'
 apply plugin: 'jacoco-android'
 
+// build.gradle (Module: app) 제일 위에 입력
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao' // apply plugin
+
 android {
     compileSdkVersion 28
     defaultConfig {
@@ -40,12 +44,11 @@ android {
 coveralls {
     jacocoReportPath 'build/reports/jacoco/jacocoTestDebugUnitTestReport/jacocoTestDebugUnitTestReport.xml'
 }
+
 jacocoAndroidUnitTestReport {
     excludes += ['**/views/**']
 }
-// build.gradle (Module: app) 제일 위에 입력
-apply plugin: 'com.android.application'
-apply plugin: 'org.greenrobot.greendao' // apply plugin
+
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -75,15 +78,15 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.5'
 
     // 안드로이드 단위테스트
-    testImplementation 'org.robolectric:robolectric:4.2'
+    testImplementation 'org.robolectric:robolectric:4.3'
     testImplementation 'org.mockito:mockito-core:2.28.2'
 
     // floating button
-    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support:design:28.0.0'
 
-    implementation 'com.android.support:cardview-v7:28.0.+'
+    implementation 'com.android.support:cardview-v7:28.0.0'
 
-    implementation 'com.google.android.gms:play-services:10.0.1'
+    implementation 'com.google.android.gms:play-services:12.0.1'
     
     // MQTT
     implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.0'

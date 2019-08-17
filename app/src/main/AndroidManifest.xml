@@ -13,6 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+
         <activity android:name=".views.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,6 +24,7 @@
       
         <activity android:name=".views.timer.CerealTimer"/>
         <activity android:name=".views.group.GroupMainActivity" android:parentActivityName=".views.main.MainActivity" />
+        <activity android:name=".views.group.GroupGenerateActivity" android:parentActivityName=".views.main.MainActivity"/>
         <activity android:name=".views.group.MakeMissionActivity" android:parentActivityName=".views.group.GroupMainActivity" />
         <activity android:name=".views.user.LoginActivity" android:parentActivityName=".views.user.NoLoginActivity" />
         <activity android:name=".views.user.NoLoginActivity" />

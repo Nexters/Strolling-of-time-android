@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".views.group.GroupMainActivity"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/group_scroll"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffffff"
+                app:layout_constraintLeft_toRightOf="parent"
+                app:layout_constraintRight_toLeftOf="parent">
+
+                <!--<android.support.design.widget.FloatingActionButton-->
+                    <!--android:id="@+id/floating_btn"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginRight="30dp"-->
+                    <!--android:onClick="onClick"-->
+                    <!--android:clickable="true"-->
+                    <!--android:layout_marginBottom="20dp"-->
+                    <!--android:background="#ffffffff"-->
+                    <!--android:fitsSystemWindows="true"-->
+                    <!--android:src="@mipmap/ic_launcher"-->
+                    <!--app:layout_constraintBottom_toBottomOf="parent"-->
+                    <!--app:layout_constraintRight_toRightOf="parent"-->
+                    <!--android:translationZ="3dp"/>-->
+
+                <ImageView
+                    android:id="@+id/img_group_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="206dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="0dp"
+                    android:background="@color/tab_active"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_group_report"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:letterSpacing="-0.03"
+                    android:gravity="end"
+                    android:text="리포트"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginRight="20dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="45dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_group_name"
+                    android:textSize="26sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintTop_toBottomOf="@id/txt_group_report"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="59dp"
+                    android:text="넥터 러닝 크루"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_group_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:letterSpacing="-0.03"
+                    app:layout_constraintTop_toBottomOf="@id/txt_group_name"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="7dp"
+                    android:text="함께 러닝하면서 스트레스 확 날려버려요!"
+                    />
+
+                <ImageView
+                    android:id="@+id/img_group_rect"
+                    android:layout_width="match_parent"
+                    android:layout_height="43dp"
+                    android:src="@drawable/group_radius_rectangle"
+                    app:layout_constraintTop_toBottomOf="@id/txt_group_detail"
+                    android:layout_marginTop="16dp"
+                    />
+
+                <TextView
+                    app:layout_constraintTop_toTopOf="@id/img_group_rect"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="#ff5151"
+                    android:text="모임"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="58dp"
+                    android:layout_marginTop="15dp"
+                    android:textColor="#ff5151"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/img_group_rect"
+                    android:text="10일째" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="#2a2a2a"
+                    android:text="총 집중 시간"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginLeft="107dp"
+                    app:layout_constraintTop_toTopOf="@id/img_group_rect"
+                    android:layout_marginTop="15dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="#2a2a2a"
+                    android:text="99시간 30분"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginLeft="179dp"
+                    app:layout_constraintTop_toTopOf="@id/img_group_rect"
+                    android:layout_marginTop="15dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/img_group_member"
+                    android:layout_width="match_parent"
+                    android:layout_height="190dp"
+                    android:src="@color/white"
+                    app:layout_constraintTop_toBottomOf="@id/img_group_rect"
+                    android:layout_marginTop="0dp"/>
+
+                <TextView
+                    app:layout_constraintTop_toTopOf="@id/img_group_member"
+                    android:layout_marginTop="18dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:text="멤버"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="@id/img_group_member"
+                    android:layout_marginTop="18dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginLeft="61dp"
+                    android:textSize="16sp"
+                    android:textColor="#046cf1"
+                    android:text="6"
+                    />
+
+                <ImageView
+                    android:id="@+id/img_group_divide"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:src="#fbfbfb"
+                    app:layout_constraintTop_toBottomOf="@id/img_group_member"
+                    android:layout_marginTop="0dp"/>
+
+                <ImageView
+                    android:id="@+id/img_group_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:src="#ffffff"
+                    app:layout_constraintTop_toBottomOf="@id/img_group_divide"
+                    android:layout_marginTop="0dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:text="미션"
+                    app:layout_constraintTop_toTopOf="@id/img_group_name"
+                    android:layout_marginTop="21dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginLeft="30dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#046cf1"
+                    android:text="6"
+                    app:layout_constraintTop_toTopOf="@id/img_group_name"
+                    android:layout_marginTop="21dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginLeft="63dp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_make_mission"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="#4a4a4a"
+                    android:gravity="end"
+                    android:text="미션 만들기"
+                    android:onClick="onClick"
+                    app:layout_constraintTop_toTopOf="@id/img_group_name"
+                    android:layout_marginTop="19dp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginRight="150dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="#4a4a4a"
+                    android:gravity="end"
+                    android:text="전체보기"
+                    app:layout_constraintTop_toTopOf="@id/img_group_name"
+                    android:layout_marginTop="19dp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginRight="30dp"
+                    />
+
+                <ListView
+                    android:id="@+id/lv_group_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbarAlwaysDrawVerticalTrack="false"
+                    app:layout_constraintTop_toBottomOf="@id/img_group_name"
+                    tools:layout_editor_absoluteX="0dp"
+                    />
+
+
+            </android.support.constraint.ConstraintLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

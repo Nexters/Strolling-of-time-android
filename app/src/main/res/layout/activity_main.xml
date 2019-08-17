@@ -38,7 +38,7 @@
 
 
                 <ImageView
-                    android:id="@+id/imageView"
+                    android:id="@+id/img_main_1"
                     android:layout_width="match_parent"
                     android:layout_height="201dp"
                     app:layout_constraintTop_toTopOf="parent"
@@ -51,12 +51,12 @@
                     android:layout_marginLeft="27dp"
                     android:layout_marginTop="20dp"
                     android:letterSpacing="-0.01"
+                    android:text="안녕하세요"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:text="안녕하세요" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/main_txt2"
@@ -64,12 +64,12 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="27dp"
                     android:letterSpacing="-0.01"
+                    android:text="닉네임다섯님"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/main_txt1"
-                    android:text="닉네임다섯님" />
+                    app:layout_constraintTop_toBottomOf="@id/main_txt1" />
 
                 <ImageView
                     android:id="@+id/imageView2"
@@ -88,12 +88,12 @@
                     android:layout_marginLeft="30dp"
                     android:layout_marginTop="20dp"
                     android:lineSpacingExtra="9sp"
+                    android:text="나의 모임"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/imageView"
-                    android:text="나의 모임" />
+                    app:layout_constraintTop_toBottomOf="@id/img_main_1" />
 
                 <TextView
                     android:id="@+id/txt_make_group"
@@ -102,21 +102,23 @@
                     android:layout_marginTop="21dp"
                     android:layout_marginRight="30dp"
                     android:lineSpacingExtra="15sp"
+                    android:text="모임 만들기"
                     android:textColor="#266ee8"
                     android:textSize="14sp"
+                    android:onClick="onClick"
                     app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/imageView"
-                    android:text="모임 만들기" />
+                    app:layout_constraintTop_toBottomOf="@id/img_main_1" />
 
                 <ImageView
                     android:id="@+id/img_main_groups"
                     android:layout_width="match_parent"
-                    android:layout_height="300dp"
-                    android:onClick="onClick"
+                    android:layout_height="0dp"
                     android:layout_marginLeft="30dp"
                     android:layout_marginTop="22dp"
                     android:layout_marginRight="30dp"
+                    android:onClick="onClick"
                     android:src="@drawable/main_square"
+                    app:layout_constraintDimensionRatio="1:1"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/txt_my_group" />
@@ -126,10 +128,9 @@
                     android:id="@+id/img_main_bar"
                     android:layout_width="match_parent"
                     android:layout_height="10dp"
-                    android:src="@drawable/main_rectangle"
-                    app:layout_constraintTop_toBottomOf="@id/img_main_groups"
                     android:layout_marginTop="30dp"
-                    />
+                    android:src="@drawable/main_rectangle"
+                    app:layout_constraintTop_toBottomOf="@id/img_main_groups" />
             </android.support.constraint.ConstraintLayout>
         </LinearLayout>
     </ScrollView>

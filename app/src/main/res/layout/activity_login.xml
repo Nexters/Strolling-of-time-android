@@ -41,36 +41,122 @@
             android:layout_marginLeft="30dp"
             />
 
-        <TextView
+        <EditText
             android:id="@+id/tv_login_id"
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:hint="이메일"
             android:textSize="16sp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="178dp"/>
+            android:layout_marginTop="178dp"
+            android:textColorHint="#d8d8d8"/>
 
-        <TextView
+
+        <EditText
             android:id="@+id/tv_login_pw"
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:hint="비밀번호"
             android:textSize="16sp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="@id/tv_login_id"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="58.5dp"/>
+            android:layout_marginTop="58.5dp"
+            android:textColorHint="#d8d8d8"/>
 
-        <Button
+        <ImageButton
+            android:id="@+id/btn_login"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginRight="30dp"
             android:background="@drawable/login_square"
-            app:layout_constraintTop_toBottomOf="@id/tv_login_pw"
-            android:layout_marginTop="26.5dp"
-            android:text="로그인"/>
+            android:radius="32dp"
+            android:text="로그인"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_login_pw" />
 
+        <TextView
+            android:id="@+id/btn_find_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:textColor="#999999"
+            android:text="아이디 찾기"
+            app:layout_constraintTop_toBottomOf="@id/btn_login"
+            android:layout_marginTop="36dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="68dp"
+            />
+
+        <TextView
+            android:id="@+id/btn_find_pw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            app:layout_constraintLeft_toRightOf="@id/btn_find_id"
+            android:layout_marginLeft="44dp"
+            android:text="비밀번호 찾기"
+            android:textColor="#999999"
+            android:textSize="13sp"
+            app:layout_constraintTop_toBottomOf="@id/btn_login" />
+
+        <TextView
+            android:id="@+id/btn_sign_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:textColor="#999999"
+            android:text="회원가입"
+            app:layout_constraintTop_toBottomOf="@id/btn_login"
+            android:layout_marginTop="36dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="68dp"
+            />
+
+        <ImageButton
+            android:id="@+id/btn_login_kakao"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="91dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/login_square"
+            android:radius="32dp"
+            android:text="카카오 로그인"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_sign_up" />
+
+        <ImageButton
+            android:id="@+id/btn_login_fb"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/login_square"
+            android:radius="32dp"
+            android:text="카카오 로그인"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_login_kakao" />
 
     </android.support.constraint.ConstraintLayout>
 

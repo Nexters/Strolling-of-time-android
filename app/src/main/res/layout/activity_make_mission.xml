@@ -1,6 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
-</android.support.constraint.ConstraintLayout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.main.MainActivity"
+    android:orientation="vertical">
+
+    <com.nexters.wiw.strolling_of_time.MakeMissionToolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:background="?attr/colorPrimaryDark"
+        android:fitsSystemWindows="true"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3.5"
+        android:background="#ffffffff"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent">
+
+
+        <EditText
+            android:id="@+id/et_mission_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="미션 설명을 입력하세요"
+            android:textSize="19sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="13.5dp"
+            android:layout_marginRight="30dp"
+            android:background="@android:color/transparent"
+            android:textColor="#d8d8d8"/>
+
+        <EditText
+            android:id="@+id/et_mission_start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="설정 안됨"
+            android:textColorHint="#b4b4b4"
+            android:textSize="18sp"
+            android:layout_marginRight="30dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/et_mission_detail"
+            android:layout_marginTop="58.5dp"
+            android:layout_marginLeft="30dp"
+            android:background="@android:color/transparent"
+            android:textColor="#d8d8d8"/>
+
+        <EditText
+            android:id="@+id/et_mission_end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="설정 안됨"
+            android:textColorHint="#b4b4b4"
+            android:textSize="18sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/et_mission_start"
+            android:layout_marginTop="58.5dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@android:color/transparent"
+            android:textColor="#d8d8d8"/>
+
+        <EditText
+            android:id="@+id/et_mission_goal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="1시간"
+            android:textSize="18sp"
+            app:layout_constraintTop_toTopOf="@id/et_mission_end"
+            android:layout_marginTop="58.5dp"
+            android:layout_marginRight="30dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="30dp"
+            android:background="@android:color/transparent"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:id="@+id/btn_make_mission"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="0dp"
+            android:background="#266ee8"
+            android:text="미션 만들기"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>
+

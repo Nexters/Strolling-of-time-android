@@ -9,8 +9,6 @@
     tools:context=".views.group.GroupMainActivity"
     android:orientation="vertical">
 
-
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -30,18 +28,20 @@
                 app:layout_constraintLeft_toRightOf="parent"
                 app:layout_constraintRight_toLeftOf="parent">
 
-                <android.support.design.widget.FloatingActionButton
-                    android:id="@+id/floating_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="30dp"
-                    android:layout_marginBottom="20dp"
-                    android:background="#ffffffff"
-                    android:fitsSystemWindows="true"
-                    android:src="@mipmap/ic_launcher"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
-                    android:translationZ="3dp"/>
+                <!--<android.support.design.widget.FloatingActionButton-->
+                    <!--android:id="@+id/floating_btn"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginRight="30dp"-->
+                    <!--android:onClick="onClick"-->
+                    <!--android:clickable="true"-->
+                    <!--android:layout_marginBottom="20dp"-->
+                    <!--android:background="#ffffffff"-->
+                    <!--android:fitsSystemWindows="true"-->
+                    <!--android:src="@mipmap/ic_launcher"-->
+                    <!--app:layout_constraintBottom_toBottomOf="parent"-->
+                    <!--app:layout_constraintRight_toRightOf="parent"-->
+                    <!--android:translationZ="3dp"/>-->
 
                 <ImageView
                     android:id="@+id/img_group_top"
@@ -224,6 +224,21 @@
                     />
 
                 <TextView
+                    android:id="@+id/tv_make_mission"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="#4a4a4a"
+                    android:gravity="end"
+                    android:text="미션 만들기"
+                    android:onClick="onClick"
+                    app:layout_constraintTop_toTopOf="@id/img_group_name"
+                    android:layout_marginTop="19dp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginRight="150dp"
+                    />
+
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="15sp"
@@ -236,14 +251,14 @@
                     android:layout_marginRight="30dp"
                     />
 
-                <ExpandableListView
+                <ListView
                     android:id="@+id/lv_group_list"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:scrollbarAlwaysDrawVerticalTrack="false"
                     app:layout_constraintTop_toBottomOf="@id/img_group_name"
+                    tools:layout_editor_absoluteX="0dp"
                     />
-
 
 
             </android.support.constraint.ConstraintLayout>

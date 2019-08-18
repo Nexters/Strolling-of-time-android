@@ -3,10 +3,7 @@ package com.nexters.wiw.strolling_of_time.views.group;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MotionEvent;
 import android.view.View;
@@ -17,6 +14,10 @@ import android.widget.ListView;
 import android.widget.ScrollView;
 import android.widget.SimpleExpandableListAdapter;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.nexters.wiw.strolling_of_time.MakeMissionToolbar;
 import com.nexters.wiw.strolling_of_time.R;
@@ -36,7 +37,7 @@ public class GroupMainActivity extends AppCompatActivity {
     private int groupPosi;
     private int childPosi;
 
-    private MemberAdapter adapter;
+    private MemberAdapter memberAdapter;
     private GroupAdpater groupAdapter;
 
     @SuppressLint("ClickableViewAccessibility")
@@ -81,8 +82,8 @@ public class GroupMainActivity extends AppCompatActivity {
         itemList.add("10");
         itemList.add("11");
 
-        adapter = new MemberAdapter(this, itemList, onClickItem);
-        listview_group.setAdapter(adapter);
+        memberAdapter = new MemberAdapter(this, itemList, onClickItem);
+        listview_group.setAdapter(memberAdapter);
 
 //    MyListDecoration decoration = new MyListDecoration();
 //    listview.addItemDecoration(decoration);

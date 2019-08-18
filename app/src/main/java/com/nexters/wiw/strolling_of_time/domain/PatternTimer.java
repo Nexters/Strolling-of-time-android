@@ -1,6 +1,7 @@
 package com.nexters.wiw.strolling_of_time.domain;
 
-import android.support.annotation.NonNull;
+
+import androidx.annotation.NonNull;
 
 import com.nexters.wiw.strolling_of_time.models.EstimatedTime;
 

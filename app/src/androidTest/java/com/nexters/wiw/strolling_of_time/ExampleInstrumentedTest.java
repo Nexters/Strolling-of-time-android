@@ -2,8 +2,8 @@ package com.nexters.wiw.strolling_of_time;
 
 import android.app.Activity;
 import android.content.Context;
-import android.support.test.InstrumentationRegistry;
-import android.support.test.runner.AndroidJUnit4;
+import androidx.test.InstrumentationRegistry;
+import androidx.test.runner.AndroidJUnit4;
 import android.util.Log;
 
 import com.nexters.wiw.strolling_of_time.models.DaoMaster;

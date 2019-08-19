@@ -132,17 +132,17 @@
                     android:text="멤버 추가"/>
 
             </LinearLayout>
-            <android.support.v7.widget.RecyclerView
+            <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1">
 
-            </android.support.v7.widget.RecyclerView>
+            </androidx.recyclerview.widget.RecyclerView>
 
         </LinearLayout>
     </LinearLayout>
 
-    <android.support.v7.widget.AppCompatButton
+    <androidx.v7.widget.AppCompatButton
         android:id="@+id/materialButton"
         android:layout_width="match_parent"
         android:layout_height="0dp"

@@ -1,6 +1,6 @@
 package com.nexters.wiw.strolling_of_time;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.nexters.wiw.strolling_of_time.domain.PatternTimer;
 import com.nexters.wiw.strolling_of_time.models.EstimatedTime;

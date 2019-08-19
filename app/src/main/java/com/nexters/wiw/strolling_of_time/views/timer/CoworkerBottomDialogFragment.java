@@ -39,7 +39,7 @@ public class CoworkerBottomDialogFragment extends BottomSheetDialogFragment {
         CoworkerBottomDialogAdapter adapter = new CoworkerBottomDialogAdapter();
         recyclerView = view.findViewById(R.id.coworker_list);
         recyclerView.setLayoutManager(
-                new LinearLayoutManager(this.getContext(), LinearLayout.VERTICAL, false));
+                new LinearLayoutManager(this.getContext(), RecyclerView.VERTICAL, false));
         recyclerView.setAdapter(adapter);
     }
 }

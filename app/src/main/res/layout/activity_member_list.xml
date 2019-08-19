@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+android:orientation="horizontal">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <ImageView
+            android:id="@+id/iv_member_profile"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/profile_circle"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/iv_profile_login"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/profile_circle_online"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#3a3a3a"
+            android:text="네글자만"
+            android:maxLength ="4"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="70dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+        />
+
+        <!--<ImageButton-->
+            <!--android:layout_width="11dp"-->
+            <!--android:layout_height="11dp"-->
+            <!--android:padding="0dp"-->
+            <!--android:src="@drawable/ic_user"-->
+            <!--style="?android:attr/borderlessButtonStyle"-->
+            <!--android:background="@android:color/transparent"-->
+            <!--android:layout_below="@id/img_main_groups"-->
+            <!--app:layout_constraintBottom_toBottomOf="@id/img_main_groups"-->
+            <!--android:layout_marginBottom="0dp"-->
+            <!--/>-->
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</RelativeLayout>

@@ -11,7 +11,7 @@ import android.widget.TextView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
 
-public class MainToolbar extends Toolbar {
+public class GroupMainToolbar extends Toolbar {
 
     /**
      * 左侧Title
@@ -26,22 +26,22 @@ public class MainToolbar extends Toolbar {
      */
     private TextView mTxtRightTitle;
 
-    public MainToolbar(Context context) {
+    public GroupMainToolbar(Context context) {
         this(context,null);
     }
 
-    public MainToolbar(Context context, AttributeSet attrs) {
+    public GroupMainToolbar(Context context, AttributeSet attrs) {
         this(context, attrs,0);
     }
 
-    public MainToolbar(Context context, AttributeSet attrs, int defStyleAttr) {
+    public GroupMainToolbar(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
 
         init(context);
     }
 
     private void init(Context context) {
-        LayoutInflater.from(context).inflate(R.layout.toolbar_main, this);
+        LayoutInflater.from(context).inflate(R.layout.toolbar_group_main, this);
 //        mTxtLeftTitle = (TextView) findViewById(R.id.txt_left_title);
 //        mTxtRightTitle = (TextView) findViewById(R.id.txt_right_title);
     }

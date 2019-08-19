@@ -1,15 +1,16 @@
 package com.nexters.wiw.strolling_of_time.views.timer;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.design.widget.BottomSheetDialogFragment;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.nexters.wiw.strolling_of_time.R;
 
 public class CoworkerBottomDialogFragment extends BottomSheetDialogFragment {
@@ -38,7 +39,7 @@ public class CoworkerBottomDialogFragment extends BottomSheetDialogFragment {
         CoworkerBottomDialogAdapter adapter = new CoworkerBottomDialogAdapter();
         recyclerView = view.findViewById(R.id.coworker_list);
         recyclerView.setLayoutManager(
-                new LinearLayoutManager(this.getContext(), LinearLayout.VERTICAL, false));
+                new LinearLayoutManager(this.getContext(), RecyclerView.VERTICAL, false));
         recyclerView.setAdapter(adapter);
     }
 }

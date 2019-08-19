@@ -1,9 +1,10 @@
 package com.nexters.wiw.strolling_of_time.views.group;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.nexters.wiw.strolling_of_time.R;
 

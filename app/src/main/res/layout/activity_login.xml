@@ -9,17 +9,17 @@
     android:orientation="vertical">
 
     <!--<com.nexters.wiw.strolling_of_time.MainToolbar-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:minHeight="?attr/actionBarSize"-->
-        <!--android:background="?attr/colorPrimaryDark"-->
-        <!--android:fitsSystemWindows="true"-->
-        <!--app:contentInsetLeft="0dp"-->
-        <!--app:contentInsetStart="0dp"-->
-        <!--/>-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:minHeight="?attr/actionBarSize"-->
+    <!--android:background="?attr/colorPrimaryDark"-->
+    <!--android:fitsSystemWindows="true"-->
+    <!--app:contentInsetLeft="0dp"-->
+    <!--app:contentInsetStart="0dp"-->
+    <!--/>-->
 
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="3.5"
@@ -158,6 +158,6 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/btn_login_kakao" />
 
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>

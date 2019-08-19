@@ -142,14 +142,14 @@
         </LinearLayout>
     </LinearLayout>
 
-    <androidx.v7.widget.AppCompatButton
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/materialButton"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.1"
         android:layout_gravity="bottom"
         android:background="@color/colorPrimaryDark"
-        android:text=""
+        android:text="모임 만들기"
         android:textColor="@color/button_text"
         android:textSize="@dimen/button_font_size"
         android:textStyle="bold"/>

@@ -30,7 +30,7 @@ public class MemberAdapter extends RecyclerView.Adapter<MemberAdapter.ViewHolder
 
         // context 와 parent.getContext() 는 같다.
         View view = LayoutInflater.from(context)
-                .inflate(R.layout.activity_member_list, parent, false);
+                .inflate(R.layout.member_item, parent, false);
 
         return new ViewHolder(view);
     }

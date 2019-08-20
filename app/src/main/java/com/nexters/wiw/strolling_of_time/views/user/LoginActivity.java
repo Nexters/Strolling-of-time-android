@@ -3,13 +3,10 @@ package com.nexters.wiw.strolling_of_time.views.user;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.nexters.wiw.strolling_of_time.R;
-import com.nexters.wiw.strolling_of_time.views.group.GroupMainActivity;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -24,7 +21,7 @@ public class LoginActivity extends AppCompatActivity {
         switch (v.getId()) {
 
             case R.id.btn_sign_up:
-                Intent intent = new Intent(this, SignInActivity.class);
+                Intent intent = new Intent(this, SignUpActivity.class);
                 startActivity(intent);
                 break;
 

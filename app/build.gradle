@@ -27,6 +27,8 @@ android {
             testCoverageEnabled false
         }
         debug {
+            // 2.BuildConfig 파일로 등록 시킴
+            buildConfigField "String", "API_ADDRESS", API_ADDRESS
             testCoverageEnabled true
         }
     }
@@ -113,6 +115,15 @@ dependencies {
     implementation 'com.android.support:design:28.0.0'
     implementation 'io.github.luizgrp.sectionedrecyclerviewadapter:sectionedrecyclerviewadapter:2.1.0'
     implementation 'org.jetbrains:annotations:15.0'
+
+    // Retrofit2
+    implementation 'com.squareup.retrofit2:retrofit:2.6.1'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
+
+    // Progress
+    implementation 'com.wang.avi:library:2.1.3'
+
 }
 
 greendao {

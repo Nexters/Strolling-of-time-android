@@ -18,54 +18,34 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-  private RecyclerView listview;
-  private MissionAdapter adapter;
-
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
-    init();
-
-//    ImageView img_main_groups = (ImageView)findViewById(R.id.img_main_groups);
-//    TextView txt_make_group = (TextView)findViewById(R.id.txt_make_group);
-
-
+    initRecyclerView();
   }
 
-  private void init() {
-
-    RecyclerView listview = findViewById(R.id.lv_mission);
+  private void initRecyclerView() {
+    RecyclerView recyclerView = findViewById(R.id.lv_mission);
     LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
-    listview.setLayoutManager(layoutManager);
+    recyclerView.setLayoutManager(layoutManager);
 
-    ArrayList<String> itemList = new ArrayList<>();
-    itemList.add("0");
-    itemList.add("1");
-    itemList.add("2");
-    itemList.add("3");
-    itemList.add("4");
-    itemList.add("5");
-    itemList.add("6");
-    itemList.add("7");
-    itemList.add("8");
-    itemList.add("9");
-    itemList.add("10");
-    itemList.add("11");
+    ArrayList<String> groups = new ArrayList<>();
+    groups.add("0");
 
-    adapter = new MissionAdapter(this, itemList, v -> {
+    MissionAdapter adapter = new MissionAdapter(this, groups, v -> {
       Intent intent = new Intent(MainActivity.this, GroupMainActivity.class);
       startActivity(intent);
     });
-    listview.setAdapter(adapter);
+    recyclerView.setAdapter(adapter);
   }
 
   public void onClick(View v) {
     switch (v.getId()) {
       case R.id.iv_profile:
         break;
-      case R.id.img_main_groups:
+      case R.id.group_card:
         Intent groupMainActivity = new Intent(this, GroupMainActivity.class);
         startActivity(groupMainActivity);
         break;

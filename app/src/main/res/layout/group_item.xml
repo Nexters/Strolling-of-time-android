@@ -9,10 +9,10 @@ android:orientation="vertical">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="10dp">
+        android:layout_marginEnd="10dp">
 
         <Button
-            android:id="@+id/img_main_groups"
+            android:id="@+id/group_card"
             android:layout_width="120dp"
             android:layout_height="150dp"
             android:onClick="onClick"
@@ -21,22 +21,13 @@ android:orientation="vertical">
             android:paddingRight="17dp"
             android:paddingLeft="17dp"
             android:paddingBottom="17dp"
-            android:text="전체ㅇㅇㅇㅇㅇㅇㅇㅇ/nㅇㅇㅇㅇㅇㅇㅇㅇ"
+            android:text="전체"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
             style="?android:attr/borderlessButtonStyle"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"/>
-
-        <!--<ImageButton-->
-            <!--android:layout_width="11dp"-->
-            <!--android:layout_height="11dp"-->
-            <!--android:padding="0dp"-->
-            <!--android:src="@drawable/ic_user"-->
-            <!--style="?android:attr/borderlessButtonStyle"-->
-            <!--android:background="@android:color/transparent"-->
-            <!--android:layout_below="@id/img_main_groups"-->
-            <!--app:layout_constraintBottom_toBottomOf="@id/img_main_groups"-->
-            <!--android:layout_marginBottom="0dp"-->
-            <!--/>-->
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

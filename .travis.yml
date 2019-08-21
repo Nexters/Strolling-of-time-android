@@ -41,6 +41,8 @@ before_script:
   - echo $CI_BUILD_NUMBER
   - echo $CI_BUILD_URL
   - echo $CI_BRANCH
+  - touch app/gradle.properties
+  - echo "export API_ADDRESS=\"${API_ADDRESS}\""
 
 script:
   - ./gradlew --no-daemon --parallel lintDebug testDebug

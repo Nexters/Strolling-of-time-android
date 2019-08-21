@@ -18,14 +18,14 @@ import retrofit2.http.Query;
 public interface UserService {
   @GET("users")
   Call<List<User>> getUsers(
-          @Header("Authorization") String auth,
+          @Header("Authorization") String jwt,
           @Query("email") String email,
           @Query("nickname") String nickName
   );
 
   @Headers("Content-Type: application/json")
   @POST("users")
-  Call<String> signUp(@Body UserRequestDto user);
+  Call<User> signUp(@Body UserRequestDto user);
 
   @GET("users/{id}")
   Call<User> getUserById(

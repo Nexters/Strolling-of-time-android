@@ -1,64 +1,47 @@
 package com.nexters.wiw.strolling_of_time.domain;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+
+@NoArgsConstructor
+@Getter
+@Setter
 public class User {
     private Long id;
+
+    private List<MissionHistory> missionHistories;
+
+    private List<GroupNotice> notices;
+
+    private List<GroupMember> members;
 
     private String nickname;
 
     private String email;
 
-    private String profileImage;
+    private String password;
 
-    private boolean isOnline;
+    private String profileImage;
 
     private LocalDateTime createdDate;
 
-    public User(Long id, String nickname, String email, String profileImage) {
-        this.id = id;
+    @Builder
+    public User(String nickname, String email, String password, String profileImage) {
         this.nickname = nickname;
         this.email = email;
+        this.password = password;
         this.profileImage = profileImage;
     }
 
-    public String getNickname() {
-        return nickname;
-    }
-
-    public void setNickname(String nickname) {
-        this.nickname = nickname;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getProfileImage() {
-        return profileImage;
-    }
-
-    public void setProfileImage(String profileImage) {
-        this.profileImage = profileImage;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public boolean isOnline() {
-        return isOnline;
-    }
-
-    public void setOnline(boolean online) {
-        isOnline = online;
+    public User update(User user) {
+        this.nickname = user.nickname;
+        this.profileImage = user.profileImage;
+        return this;
     }
 }

@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.nexters.wiw.strolling_of_time.BuildConfig;
 import com.nexters.wiw.strolling_of_time.ProgressDialog;
 import com.nexters.wiw.strolling_of_time.R;
+import com.nexters.wiw.strolling_of_time.domain.User;
 import com.nexters.wiw.strolling_of_time.domain.UserService;
 import com.nexters.wiw.strolling_of_time.dto.UserRequestDto;
 import com.nexters.wiw.strolling_of_time.views.main.MainActivity;
@@ -23,7 +24,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-import retrofit2.converter.jackson.JacksonConverterFactory;
+//import retrofit2.converter.jackson.JacksonConverterFactory;
 
 import static android.Manifest.permission.INTERNET;
 
@@ -75,12 +76,12 @@ public class SignUpActivity extends AppCompatActivity {
 
         UserRequestDto userRequestDto = new UserRequestDto(
                 email, password, nickname, "");
-        Call<String> result = service.signUp(userRequestDto);
+        Call<User> result = service.signUp(userRequestDto);
 
         Intent main = new Intent(this, MainActivity.class);
-        result.enqueue(new Callback<String>() {
+        result.enqueue(new Callback<User>() {
             @Override
-            public void onResponse(@NotNull Call<String> call, @NotNull Response<String> response) {
+            public void onResponse(@NotNull Call<User> call, @NotNull Response<User> response) {
                 if(response.isSuccessful()) {
                     startActivity(main);
                 } else {
@@ -90,7 +91,7 @@ public class SignUpActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(@NotNull Call<String> call, @NotNull Throwable t) {
+            public void onFailure(@NotNull Call<User> call, @NotNull Throwable t) {
                 Log.d(this.getClass().getSimpleName(), "onFailure: " + t.getMessage());
                 progressDialog.dismiss();
                 submit.setClickable(true);

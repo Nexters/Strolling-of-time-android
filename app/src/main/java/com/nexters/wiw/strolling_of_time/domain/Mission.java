@@ -2,6 +2,12 @@ package com.nexters.wiw.strolling_of_time.domain;
 
 import java.time.LocalDateTime;
 
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+@Getter
 public class Mission {
   private long id;
 
@@ -19,6 +25,7 @@ public class Mission {
 
   private LocalDateTime created;
 
+  @Builder
   public Mission(String name, String description, int expectLearningTime, LocalDateTime estimate) {
     this.name = name;
     this.description = description;

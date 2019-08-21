@@ -1,5 +1,6 @@
 package com.nexters.wiw.strolling_of_time;
 
+import org.apache.commons.codec.binary.Base64;
 import org.junit.Test;
 
 import java.util.concurrent.TimeUnit;
@@ -12,6 +13,7 @@ import io.reactivex.schedulers.TestScheduler;
 import static org.junit.Assert.assertEquals;
 
 public class CompletableTimerTest {
+
   @Test
   public void timer() {
 
@@ -39,4 +41,5 @@ public class CompletableTimerTest {
 
     disposable.dispose();
   }
+
 }

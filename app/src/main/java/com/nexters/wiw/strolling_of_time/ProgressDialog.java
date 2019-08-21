@@ -10,7 +10,11 @@ import org.jetbrains.annotations.NotNull;
 import java.util.Objects;
 
 public class ProgressDialog {
-  final private Dialog dialog;
+  private Dialog dialog;
+
+  public ProgressDialog() {
+    throw new UnsupportedOperationException("기본 생성자는 사용할 수 없습니다.");
+  }
 
   public ProgressDialog(@NotNull Context context) {
     dialog = new Dialog(context);

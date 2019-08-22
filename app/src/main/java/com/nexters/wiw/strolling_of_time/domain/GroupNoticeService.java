@@ -30,7 +30,7 @@ public interface GroupNoticeService {
   @Headers("Content-Type: application/json")
   @POST("group/{id}/group-notice")
   Call<GroupNotice> createGroupNotice(
-          @Header("Authrization") String jwt,
+          @Header("Authorization") String jwt,
           @Body GroupNoticeRequestDto notice,
           @Path("id") Long id
   );

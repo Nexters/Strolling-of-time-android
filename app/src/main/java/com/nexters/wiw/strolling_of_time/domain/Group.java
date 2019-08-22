@@ -11,21 +11,14 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-class Group {
-  private Long id;
-
-  private String name;
-
-  private String description;
-
-  private String profileImage;
-
-  private String backgroundImage;
-
-  private LocalDateTime created;
-
-  private int memberLimit;
-
+public class Group {
   private boolean active;
-
+  private String backgroundImage;
+  private String category;
+  private String created;
+  private String description;
+  private long id;
+  private long memberLimit;
+  private String name;
+  private String profileImage;
 }

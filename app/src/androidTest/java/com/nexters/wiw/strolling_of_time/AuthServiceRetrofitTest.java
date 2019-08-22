@@ -10,9 +10,13 @@ import com.nexters.wiw.strolling_of_time.domain.Auth;
 import com.nexters.wiw.strolling_of_time.domain.AuthService;
 
 import org.jetbrains.annotations.NotNull;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+
+import java.io.IOException;
+import java.net.ConnectException;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -35,37 +39,20 @@ public class AuthServiceRetrofitTest {
   }
 
   @Test
-  public void 로그인_테스트() {
+  public void 로그인_토큰발급_테스트() {
     String basicAuth = Auth.basicAuthHeaderOf(TestConstants.EMAIL, TestConstants.PASSWORD);
     Call<Auth> auth = service.login(basicAuth);
-    auth.enqueue(new Callback<Auth>() {
-      @Override
-      public void onResponse(
-              @NotNull Call<Auth> call,
-              @NotNull Response<Auth> response) {
 
-        if(response.isSuccessful()) {
-
-          assert response.body() != null;
-
-          String token = response.body().getToken();
-
-          try {
-            new JWT(token);
-          } catch (DecodeException e) {
-            Log.e(TAG, "JWT decode: ", e);
-            assert false;
-          }
-        }
+    try {
+      Response<Auth> auth_ = auth.execute();
+      if(!auth_.isSuccessful()) {
+        assert auth_.errorBody() != null;
+        System.out.println("\nError: " + auth_.errorBody().string());
       }
-
-      @Override
-      public void onFailure(
-              @NotNull Call<Auth> call,
-              @NotNull Throwable t) {
-        Log.d(TAG, "onFailure: " + t.getMessage());
-        assert false;
-      }
-    });
+      System.out.println("Success: " + auth_.body().getToken());
+    } catch (Exception e) {
+      Log.e(TAG, "로그인_테스트: ", e);
+      Assert.fail();
+    }
   }
 }

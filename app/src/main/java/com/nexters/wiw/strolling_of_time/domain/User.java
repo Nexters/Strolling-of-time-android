@@ -29,7 +29,7 @@ public class User {
 
     private String profileImage;
 
-    private LocalDateTime createdDate;
+    private String createdDate;
 
     @Builder
     public User(String nickname, String email, String password, String profileImage) {

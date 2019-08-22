@@ -4,11 +4,11 @@ import java.time.LocalDateTime;
 
 public class GroupNoticeRequestDto {
   private String content;
-  private LocalDateTime created;
+  private String created;
   private String title;
 
   public GroupNoticeRequestDto(
-          String content, LocalDateTime created, String title
+          String content, String created, String title
   ) {
     this.content = content;
     this.created = created;

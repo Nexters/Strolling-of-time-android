@@ -20,6 +20,7 @@ public interface MissionHistoryService {
   @Headers("Content-Type: application/json")
   @POST("mission/{id}/times")
   Call<MissionHistory> createMissionTime(
+          @Header("Authorization") String auth,
           @Path("id") Long id,
           @Body MissionHistoryRequestDto mission
   );

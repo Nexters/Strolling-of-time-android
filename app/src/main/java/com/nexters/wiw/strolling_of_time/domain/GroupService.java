@@ -22,10 +22,10 @@ public interface GroupService {
           @Query("id") Long id
   );
 
-  @GET("groups")
-  Call<List<Group>> getGroups(
+  @GET("groups/{id}")
+  Call<Group> getGroups(
           @Header("Authorization") String auth,
-          @Query("keyword") String keyWord
+          @Path("id") Long id
   );
 
   @Headers("Content-Type: application/json")

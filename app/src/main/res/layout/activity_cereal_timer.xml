@@ -39,7 +39,14 @@
             android:textAlignment="center"
             android:textSize="22sp" />
     </LinearLayout>
-
+    <com.nexters.wiw.strolling_of_time.views.timer.ArcTimerView
+        android:id="@+id/timerView"
+        android:layout_width="284dp"
+        android:layout_height="283dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_bottom_sheet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cereal_timer"
         android:layout_width="264dp"

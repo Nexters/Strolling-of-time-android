@@ -1,54 +1,69 @@
 package com.nexters.wiw.strolling_of_time.views.adapter;
 
 import android.content.Context;
-import android.database.Cursor;
-import android.graphics.Color;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
-import androidx.cursoradapter.widget.CursorAdapter;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
-import com.nexters.wiw.strolling_of_time.*;
+import com.nexters.wiw.strolling_of_time.R;
+import com.nexters.wiw.strolling_of_time.views.group.GroupMainActivity;
+import com.nexters.wiw.strolling_of_time.views.main.MainActivity;
+
+import java.util.ArrayList;
+
+public class GroupAdpater extends RecyclerView.Adapter<GroupAdpater.ViewHolder> {
+
+    private ArrayList<String> itemList;
+    private Context context;
+    private View.OnClickListener onClickItem;
+
+    public GroupAdpater(Context context, ArrayList<String> itemList, View.OnClickListener onClickItem) {
+        this.context = context;
+        this.itemList = itemList;
+        this.onClickItem = onClickItem;
+    }
 
 
-public class GroupAdpater extends CursorAdapter {
-    LayoutInflater inflater;
-    public static Cursor cursor;
+    @Override
+    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-    public GroupAdpater(Context context, Cursor c) {
-        super(context, c, CursorAdapter.FLAG_REGISTER_CONTENT_OBSERVER);
-        inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        cursor = c;
+        View view = LayoutInflater.from(context)
+                .inflate(R.layout.activity_mission_list, parent, false);
 
+        return new ViewHolder(view);
     }
 
     @Override
-    public View newView(Context context, Cursor cursor, ViewGroup parent) {
-        View listItemLayout = inflater.inflate(R.layout.activity_main_list, parent, false);
-        return listItemLayout;
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        String item = itemList.get(position);
+
+        holder.img_main_groups.setOnClickListener(view -> {
+            this.onClickItem.onClick(view);
+        });
     }
 
+
     @Override
-    public void bindView(View view, Context context, Cursor cursor) {
-        TextView mission_title = (TextView) view.findViewById(R.id.mission_title);
-        TextView mission_time = (TextView) view.findViewById(R.id.mission_time);
-        TextView mission_remain_time = (TextView) view.findViewById(R.id.mission_remain_time);
-
-        mission_title.setText("hello");
-        mission_time.setText("hello");
-        mission_remain_time.setText("hello");
-
-//        mission_title.setText(cursor.getString(1));
-//        mission_time.setText(cursor.getString(2));
-//        mission_remain_time.setText(cursor.getString(3));
+    public int getItemCount() {
+        return itemList.size();
+    }
 
 
-//        date += cursor.getString(2) + "/" + cursor.getString(3) + "/" + cursor.getString(4);
-//        tvDate.setText(date);
-//        tvDiary.setText(cursor.getString(1));
-//        tvFeel.setText(cursor.getString(5));
+    public class ViewHolder extends RecyclerView.ViewHolder {
 
+        public Button img_main_groups;
+
+        public ViewHolder(View itemView) {
+            super(itemView);
+
+            img_main_groups = itemView.findViewById(R.id.img_main_groups);
+
+        }
     }
 }

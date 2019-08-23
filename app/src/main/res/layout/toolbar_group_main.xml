@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="?attr/actionBarSize"
-        android:background="@color/tab_active"
+        android:background="#ff4e78"
         android:fitsSystemWindows="true"
         app:contentInsetLeft="0dp"
         app:contentInsetStart="0dp">

@@ -25,6 +25,7 @@ import com.nexters.wiw.strolling_of_time.views.adapter.GroupAdpater;
 import com.nexters.wiw.strolling_of_time.views.adapter.MemberAdapter;
 import com.nexters.wiw.strolling_of_time.views.adapter.MissionAdapter;
 import com.nexters.wiw.strolling_of_time.views.main.MainActivity;
+import com.nexters.wiw.strolling_of_time.views.timer.CerealTimer;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -32,13 +33,8 @@ import java.util.List;
 
 public class GroupMainActivity extends AppCompatActivity {
 
-    private static final ArrayList<HashMap<String,String>> parentItems = new ArrayList<HashMap<String,String>>(); // 부모 리스트
-    private static final ArrayList<ArrayList<HashMap<String,String>>> childItems = new ArrayList<ArrayList<HashMap<String,String>>>(); // 자식 리스트
-    private int groupPosi;
-    private int childPosi;
-
     private MemberAdapter memberAdapter;
-    private GroupAdpater groupAdapter;
+    private MissionAdapter missionAdapter;
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
@@ -57,12 +53,12 @@ public class GroupMainActivity extends AppCompatActivity {
             }
         });
 
-        init();
-        init2();
+        init_member();
+        init_mission();
 
     }
 
-    private void init() {
+    private void init_member() {
 
         RecyclerView listview_group = findViewById(R.id.lv_member_list);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
@@ -71,45 +67,39 @@ public class GroupMainActivity extends AppCompatActivity {
         ArrayList<String> itemList = new ArrayList<>();
         itemList.add("0");
         itemList.add("1");
-        itemList.add("2");
-        itemList.add("3");
-        itemList.add("4");
-        itemList.add("5");
-        itemList.add("6");
-        itemList.add("7");
-        itemList.add("8");
-        itemList.add("9");
-        itemList.add("10");
-        itemList.add("11");
 
         memberAdapter = new MemberAdapter(this, itemList, onClickItem);
         listview_group.setAdapter(memberAdapter);
+    }
 
+    private void init_mission() {
+
+        RecyclerView listview_group = findViewById(R.id.lv_mission_list);
+
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        listview_group.setLayoutManager(layoutManager);
+
+        ArrayList<String> itemList = new ArrayList<>();
+        itemList.add("0");
+        itemList.add("1");
+
+//        missionAdapter = new MissionAdapter(this, itemList, onClickItem);
+
+        missionAdapter = new MissionAdapter(this, itemList, v -> {
+            Intent intent = new Intent(GroupMainActivity.this, CerealTimer.class);
+            startActivity(intent);
+        });
+
+        listview_group.setAdapter(missionAdapter);
+
+        //리스트 데코
 //    MyListDecoration decoration = new MyListDecoration();
 //    listview.addItemDecoration(decoration);
     }
 
-    private void init2() {
-
-        ListView listview2 = findViewById(R.id.lv_group_list);
-
-        ArrayList<String> itemList2 = new ArrayList<>();
-        itemList2.add("0");
-        itemList2.add("1");
-
-//        groupAdapter = new GroupAdapter(this, itemList, v -> {
-//        });
-//        listview2.setAdapter(groupAdapter);
-
-//    MyListDecoration decoration = new MyListDecoration();
-//    listview.addItemDecoration(decoration);
-    }
 
     private View.OnClickListener onClickItem = v -> {
         String str = (String) v.getTag();
-        Toast.makeText(GroupMainActivity.this, str, Toast.LENGTH_SHORT).show();
-        //        Intent intent = new Intent(this, GroupMainActivity.class);
-//        startActivity(intent);
     };
 
 

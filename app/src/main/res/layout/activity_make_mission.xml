@@ -32,14 +32,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="미션 설명을 입력하세요"
-            android:textSize="19sp"
+            android:textSize="18sp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="13.5dp"
             android:layout_marginRight="30dp"
             android:background="@android:color/transparent"
-            android:textColor="#d8d8d8"/>
+            android:textColor="#d8d8d8"
+            android:textColorHint="#b4b4b4"/>
 
         <EditText
             android:id="@+id/et_mission_start"
@@ -77,6 +78,7 @@
             android:layout_height="wrap_content"
             android:hint="1시간"
             android:textSize="18sp"
+            android:textColorHint="#b4b4b4"
             app:layout_constraintTop_toTopOf="@id/et_mission_end"
             android:layout_marginTop="58.5dp"
             android:layout_marginRight="30dp"

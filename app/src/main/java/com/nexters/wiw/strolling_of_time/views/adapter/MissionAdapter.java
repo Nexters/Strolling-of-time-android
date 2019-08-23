@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.nexters.wiw.strolling_of_time.R;
@@ -32,9 +33,8 @@ public class MissionAdapter extends RecyclerView.Adapter<MissionAdapter.ViewHold
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-        // context 와 parent.getContext() 는 같다.
         View view = LayoutInflater.from(context)
-                .inflate(R.layout.activity_mission_list, parent, false);
+                .inflate(R.layout.activity_main_list, parent, false);
 
         return new ViewHolder(view);
     }
@@ -43,13 +43,9 @@ public class MissionAdapter extends RecyclerView.Adapter<MissionAdapter.ViewHold
     public void onBindViewHolder(MissionAdapter.ViewHolder holder, int position) {
         String item = itemList.get(position);
 
-        holder.img_main_groups.setOnClickListener(view -> {
+        holder.mission_list.setOnClickListener(view -> {
             this.onClickItem.onClick(view);
         });
-//
-//        holder.textview.setText(item);
-//        holder.textview.setTag(item);
-//        holder.textview.setOnClickListener(onClickItem);
     }
 
     @Override
@@ -60,12 +56,12 @@ public class MissionAdapter extends RecyclerView.Adapter<MissionAdapter.ViewHold
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        public Button img_main_groups;
+        public CardView mission_list;
 
         public ViewHolder(View itemView) {
             super(itemView);
 
-            img_main_groups = itemView.findViewById(R.id.img_main_groups);
+            mission_list = itemView.findViewById(R.id.mission_list);
 
         }
     }

@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.nexters.wiw.strolling_of_time.R;
 
 public class GroupGenerateActivity extends AppCompatActivity {
+
   @Override
   protected void onCreate(@Nullable Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);

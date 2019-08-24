@@ -6,14 +6,13 @@
     android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/mission_list"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         app:cardCornerRadius="5dp"
         app:cardElevation="3dp"
-        android:layout_marginTop="11dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_margin="10dp"
         >
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -23,7 +22,7 @@
             <ImageView
                 android:layout_width="5dp"
                 android:layout_height="80dp"
-                android:background="#9887ff"
+                android:background="#ff4e78"
                 app:layout_constraintTop_toTopOf="@id/main_card"
                 app:layout_constraintLeft_toLeftOf="@id/main_card"
                 android:layout_marginLeft="0dp"

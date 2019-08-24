@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.main.MainActivity"
+    android:orientation="vertical">
+
+    <com.nexters.wiw.strolling_of_time.SigninToolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:background="?attr/colorPrimaryDark"
+        android:fitsSystemWindows="true"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3.5"
+        android:background="#ffffffff"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent">
+
+        <ImageView
+            android:id="@+id/img_sign_profile"
+            android:layout_width="113dp"
+            android:layout_height="112dp"
+            android:src="@drawable/profile_circle"
+            android:layout_marginTop="41.5dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/tv_sign_edit_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#ff4e78"
+            android:text="편집하기"
+            app:layout_constraintTop_toBottomOf="@id/img_sign_profile"
+            android:layout_marginTop="17dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:textAlignment="center"
+            />
+
+        <EditText
+            android:id="@+id/et_sign_email"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="이메일"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_sign_edit_profile"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="45dp"
+            android:textColorHint="#d8d8d8"/>
+
+        <EditText
+            android:id="@+id/et_sign_pw"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="비밀번호"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@id/et_sign_email"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="58.5dp"
+            android:textColorHint="#d8d8d8"/>
+
+        <EditText
+            android:id="@+id/et_sign_nickname"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="닉네임"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@id/et_sign_pw"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="58.5dp"
+            android:textColorHint="#d8d8d8"/>
+
+        <Button
+            android:id="@+id/btn_make_user"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="0dp"
+            android:background="#ff4e78"
+            android:text="계정 만들기"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
+

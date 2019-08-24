@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import androidx.cardview.widget.CardView;
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.nexters.wiw.strolling_of_time.R;
@@ -17,13 +17,13 @@ import com.nexters.wiw.strolling_of_time.views.main.MainActivity;
 
 import java.util.ArrayList;
 
-public class MissionAdapter extends RecyclerView.Adapter<MissionAdapter.ViewHolder> {
+public class GroupAdpater extends RecyclerView.Adapter<GroupAdpater.ViewHolder> {
 
     private ArrayList<String> itemList;
     private Context context;
     private View.OnClickListener onClickItem;
 
-    public MissionAdapter(Context context, ArrayList<String> itemList, View.OnClickListener onClickItem) {
+    public GroupAdpater(Context context, ArrayList<String> itemList, View.OnClickListener onClickItem) {
         this.context = context;
         this.itemList = itemList;
         this.onClickItem = onClickItem;
@@ -34,19 +34,20 @@ public class MissionAdapter extends RecyclerView.Adapter<MissionAdapter.ViewHold
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         View view = LayoutInflater.from(context)
-                .inflate(R.layout.activity_main_list, parent, false);
+                .inflate(R.layout.activity_mission_list, parent, false);
 
         return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(MissionAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         String item = itemList.get(position);
 
-        holder.mission_list.setOnClickListener(view -> {
+        holder.img_main_groups.setOnClickListener(view -> {
             this.onClickItem.onClick(view);
         });
     }
+
 
     @Override
     public int getItemCount() {
@@ -56,12 +57,12 @@ public class MissionAdapter extends RecyclerView.Adapter<MissionAdapter.ViewHold
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        public CardView mission_list;
+        public Button img_main_groups;
 
         public ViewHolder(View itemView) {
             super(itemView);
 
-            mission_list = itemView.findViewById(R.id.mission_list);
+            img_main_groups = itemView.findViewById(R.id.img_main_groups);
 
         }
     }

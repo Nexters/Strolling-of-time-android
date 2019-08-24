@@ -28,7 +28,6 @@ public class MemberAdapter extends RecyclerView.Adapter<MemberAdapter.ViewHolder
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-        // context 와 parent.getContext() 는 같다.
         View view = LayoutInflater.from(context)
                 .inflate(R.layout.member_item, parent, false);
 
@@ -38,10 +37,6 @@ public class MemberAdapter extends RecyclerView.Adapter<MemberAdapter.ViewHolder
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         String item = itemList.get(position);
-//
-//        holder.textview.setText(item);
-//        holder.textview.setTag(item);
-//        holder.textview.setOnClickListener(onClickItem);
     }
 
     @Override
@@ -57,7 +52,6 @@ public class MemberAdapter extends RecyclerView.Adapter<MemberAdapter.ViewHolder
         public ViewHolder(View itemView) {
             super(itemView);
 
-//            textview = itemView.findViewById(R.id.item_textview);
         }
     }
 }

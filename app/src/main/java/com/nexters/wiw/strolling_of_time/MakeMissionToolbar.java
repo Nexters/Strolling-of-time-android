@@ -13,17 +13,8 @@ import androidx.core.content.ContextCompat;
 
 public class MakeMissionToolbar extends Toolbar {
 
-    /**
-     * 左侧Title
-     */
     private TextView mTxtLeftTitle;
-    /**
-     * 中间Title
-     */
     private TextView mTxtMiddleTitle;
-    /**
-     * 右侧Title
-     */
     private TextView mTxtRightTitle;
 
     public MakeMissionToolbar(Context context) {

@@ -16,7 +16,14 @@ public class MakeMissionActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_make_mission);
+        initToolbar();
+    }
 
+    private void initToolbar(){
+        ImageView close_button = findViewById(R.id.iv_close_make_mission);
+        close_button.setOnClickListener(v->{
+            this.finish();
+        });
     }
 
     public void onClick(View v) {

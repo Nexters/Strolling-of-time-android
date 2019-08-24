@@ -66,14 +66,14 @@
             android:layout_marginTop="58.5dp"
             android:textColorHint="#d8d8d8"/>
 
-        <ImageButton
+        <Button
             android:id="@+id/btn_login"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="28dp"
             android:layout_marginRight="30dp"
-            android:background="@drawable/login_square"
+            android:background="#ff4e78"
             android:radius="32dp"
             android:text="로그인"
             android:textAlignment="center"
@@ -85,78 +85,29 @@
             app:layout_constraintTop_toBottomOf="@id/tv_login_pw" />
 
         <TextView
-            android:id="@+id/btn_find_id"
+            android:id="@+id/tv_not_user"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="13sp"
-            android:textColor="#999999"
-            android:text="아이디 찾기"
+            android:text="회원이 아니신가요?"
             app:layout_constraintTop_toBottomOf="@id/btn_login"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="27dp"
+            android:layout_marginLeft="120dp"
             app:layout_constraintLeft_toLeftOf="parent"
-            android:layout_marginLeft="68dp"
             />
-
-        <TextView
-            android:id="@+id/btn_find_pw"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="36dp"
-            app:layout_constraintLeft_toRightOf="@id/btn_find_id"
-            android:layout_marginLeft="44dp"
-            android:text="비밀번호 찾기"
-            android:textColor="#999999"
-            android:textSize="13sp"
-            app:layout_constraintTop_toBottomOf="@id/btn_login" />
 
         <TextView
             android:id="@+id/btn_sign_up"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="13sp"
-            android:textColor="#999999"
-            android:text="회원가입"
+            android:textColor="#ff4e78"
+            android:text="가입하기"
             app:layout_constraintTop_toBottomOf="@id/btn_login"
-            android:layout_marginTop="36dp"
-            app:layout_constraintRight_toRightOf="parent"
-            android:layout_marginRight="68dp"
+            android:layout_marginTop="27dp"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toRightOf="@id/tv_not_user"
             />
 
-        <ImageButton
-            android:id="@+id/btn_login_kakao"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="91dp"
-            android:layout_marginRight="30dp"
-            android:background="@drawable/login_square"
-            android:radius="32dp"
-            android:text="카카오 로그인"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btn_sign_up" />
-
-        <ImageButton
-            android:id="@+id/btn_login_fb"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginRight="30dp"
-            android:background="@drawable/login_square"
-            android:radius="32dp"
-            android:text="카카오 로그인"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btn_login_kakao" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

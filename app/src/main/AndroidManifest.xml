@@ -21,17 +21,19 @@
         <activity android:name=".views.user.LoginActivity"/>
         <activity android:name=".views.main.MainActivity"/>
         <activity android:name=".views.user.SignUpActivity">
+
+        </activity>
+
+        <activity android:name=".views.group.GroupMainActivity" android:parentActivityName=".views.main.MainActivity" />
+        <activity android:name=".views.group.GroupGenerateActivity" android:parentActivityName=".views.main.MainActivity"/>
+        <activity android:name=".views.group.MakeMissionActivity" android:parentActivityName=".views.group.GroupMainActivity" />
+        <activity android:name=".views.timer.CerealTimer">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".views.group.GroupMainActivity" android:parentActivityName=".views.main.MainActivity" />
-        <activity android:name=".views.group.GroupGenerateActivity" android:parentActivityName=".views.main.MainActivity"/>
-        <activity android:name=".views.group.MakeMissionActivity" android:parentActivityName=".views.group.GroupMainActivity" />
-        <activity android:name=".views.timer.CerealTimer"/>
         <activity android:name=".ProgressDialog"/>
 
 

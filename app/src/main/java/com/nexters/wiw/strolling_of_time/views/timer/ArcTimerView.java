@@ -81,7 +81,8 @@ public class ArcTimerView extends View {
   }
 
   public void setMarginColor(int color){
-    marginColor = color;
+    marginColor = ContextCompat.getColor(getContext(), color);
+    invalidate();
   }
 
   public void initialize(){

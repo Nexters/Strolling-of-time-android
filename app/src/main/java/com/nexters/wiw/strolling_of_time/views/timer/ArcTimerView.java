@@ -87,6 +87,7 @@ public class ArcTimerView extends View {
 
   public void initialize(){
     this.time = 0;
+    invalidate();
   }
 
 }

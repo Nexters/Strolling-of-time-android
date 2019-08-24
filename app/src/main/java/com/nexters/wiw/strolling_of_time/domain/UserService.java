@@ -1,8 +1,7 @@
 package com.nexters.wiw.strolling_of_time.domain;
 
 import com.nexters.wiw.strolling_of_time.dto.UserRequestDto;
-
-import java.util.List;
+import com.nexters.wiw.strolling_of_time.dto.UserResponseDto;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -17,10 +16,9 @@ import retrofit2.http.Query;
 
 public interface UserService {
   @GET("users")
-  Call<List<User>> getUsers(
+  Call<UserResponseDto> getUsers(
           @Header("Authorization") String jwt,
-          @Query("email") String email,
-          @Query("nickname") String nickName
+          @Query("query") String query
   );
 
   @Headers("Content-Type: application/json")

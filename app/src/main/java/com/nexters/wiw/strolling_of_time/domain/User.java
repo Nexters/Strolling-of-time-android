@@ -38,7 +38,14 @@ public class User {
         this.password = password;
         this.profileImage = profileImage;
     }
-
+    @Builder
+    public User(String nickname, String email, long id, String password, String profileImage) {
+        this.nickname = nickname;
+        this.email = email;
+        this.id = id;
+        this.password = password;
+        this.profileImage = profileImage;
+    }
     public User update(User user) {
         this.nickname = user.nickname;
         this.profileImage = user.profileImage;

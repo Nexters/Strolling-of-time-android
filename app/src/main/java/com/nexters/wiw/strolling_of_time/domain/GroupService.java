@@ -1,6 +1,7 @@
 package com.nexters.wiw.strolling_of_time.domain;
 
 import com.nexters.wiw.strolling_of_time.dto.GroupRequestDto;
+import com.nexters.wiw.strolling_of_time.dto.GroupResponseDto;
 
 import java.util.List;
 
@@ -16,14 +17,17 @@ import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 public interface GroupService {
-  @GET("group")
-  Call<Group> getGroup(
+  @GET("groups")
+  Call<GroupResponseDto> getGroups(
           @Header("Authorization") String auth,
-          @Query("id") Long id
+          @Query("category") String category,
+          @Query("name") String name,
+          @Query("page") int page,
+          @Query("sort") String sort
   );
 
   @GET("groups/{id}")
-  Call<Group> getGroups(
+  Call<Group> getGroup(
           @Header("Authorization") String auth,
           @Path("id") Long id
   );

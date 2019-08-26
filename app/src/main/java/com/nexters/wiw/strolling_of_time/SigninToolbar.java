@@ -33,7 +33,7 @@ public class SigninToolbar extends Toolbar {
 
     private void init(Context context) {
         LayoutInflater.from(context).inflate(R.layout.toolbar_sign, this);
-//        mTxtLeftTitle = (TextView) findViewById(R.id.txt_left_title);
+        mTxtLeftTitle = findViewById(R.id.txt_left_title);
 //        mTxtRightTitle = (TextView) findViewById(R.id.txt_right_title);
     }
 

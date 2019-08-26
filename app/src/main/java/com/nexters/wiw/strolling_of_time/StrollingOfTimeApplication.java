@@ -8,23 +8,9 @@ import org.greenrobot.greendao.database.Database;
 
 
 public class StrollingOfTimeApplication extends Application {
-    public static DaoSession daoSession;
-    public static final boolean ENCRYPTED = true;
 
     @Override
     public void onCreate() {
         super.onCreate();
-        DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(this, Constants.ENCRYPTED ? Constants.DATABASE_NAME+"_encrypted" : Constants.DATABASE_NAME);
-        Database db = ENCRYPTED ? helper.getEncryptedWritableDb("password") : helper.getWritableDb();
-        daoSession = new DaoMaster(db).newSession();
-    }
-    public DaoSession getDaoSession(){
-        if (daoSession == null) {
-            DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(this, Constants.ENCRYPTED ? Constants.DATABASE_NAME+"_encrypted" : Constants.DATABASE_NAME);
-            Database db = ENCRYPTED ? helper.getEncryptedWritableDb("password") : helper.getWritableDb();
-            daoSession = new DaoMaster(db).newSession();
-
-        }
-        return daoSession;
     }
 }

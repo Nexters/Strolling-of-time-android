@@ -29,7 +29,7 @@ public class MemberAdapter extends RecyclerView.Adapter<MemberAdapter.ViewHolder
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         View view = LayoutInflater.from(context)
-                .inflate(R.layout.activity_member_list, parent, false);
+                .inflate(R.layout.member_item, parent, false);
 
         return new ViewHolder(view);
     }

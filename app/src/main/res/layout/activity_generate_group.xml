@@ -2,10 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     android:background="@android:color/white"
     android:orientation="vertical"
-    tools:context=".views.group.GroupGenerateActivity"
     android:weightSum="1">
     <include
         android:id="@+id/include"
@@ -144,17 +142,16 @@
         </LinearLayout>
     </LinearLayout>
 
-    <!-- 이 부분에서 계속 오류남 수정해야 할듯-->
-    <!--<androidx.v7.widget.AppCompatButton-->
-        <!--android:id="@+id/materialButton"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="0dp"-->
-        <!--android:layout_weight="0.1"-->
-        <!--android:layout_gravity="bottom"-->
-        <!--android:background="@color/colorPrimaryDark"-->
-        <!--android:text=""-->
-        <!--android:textColor="@color/button_text"-->
-        <!--android:textSize="@dimen/button_font_size"-->
-        <!--android:textStyle="bold"/>-->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/materialButton"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:layout_gravity="bottom"
+        android:background="@color/colorPrimaryDark"
+        android:text="모임 만들기"
+        android:textColor="@color/button_text"
+        android:textSize="@dimen/button_font_size"
+        android:textStyle="bold"/>
 
 </LinearLayout>

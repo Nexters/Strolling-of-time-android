@@ -67,3 +67,5 @@ fastlane/readme.md
 # mac
 .DS_Store
 .idea/runConfigurations.xml
+
+app/gradle.properties

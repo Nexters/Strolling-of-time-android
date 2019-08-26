@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.nexters.wiw.strolling_of_time">
 
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:name=".StrollingOfTimeApplication"
         android:allowBackup="false"
@@ -12,23 +13,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        tools:ignore="GoogleAppIndexingWarning">
+        tools:ignore="GoogleAppIndexingWarning"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="m">
 
-        <activity android:name=".views.main.MainActivity">
+        <activity android:name=".views.user.NoLoginActivity" />
+        <activity android:name=".views.user.LoginActivity"/>
+        <activity android:name=".views.main.MainActivity"/>
+        <activity android:name=".views.user.SignUpActivity">
+
+        </activity>
+
+        <activity android:name=".views.group.GroupMainActivity" android:parentActivityName=".views.main.MainActivity" />
+        <activity android:name=".views.group.GroupGenerateActivity" android:parentActivityName=".views.main.MainActivity"/>
+        <activity android:name=".views.group.MakeMissionActivity" android:parentActivityName=".views.group.GroupMainActivity" />
+        <activity android:name=".views.timer.CerealTimer">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-      
-        <activity android:name=".views.timer.CerealTimer"/>
-        <activity android:name=".views.group.GroupMainActivity" android:parentActivityName=".views.main.MainActivity" />
-        <activity android:name=".views.group.GroupGenerateActivity" android:parentActivityName=".views.main.MainActivity"/>
-        <activity android:name=".views.group.MakeMissionActivity" android:parentActivityName=".views.group.GroupMainActivity" />
-        <activity android:name=".views.user.LoginActivity" android:parentActivityName=".views.user.NoLoginActivity" />
-        <activity android:name=".views.user.NoLoginActivity" />
-        <activity android:name=".views.user.SignInActivity" android:parentActivityName=".views.user.NoLoginActivity" />
+        <activity android:name=".ProgressDialog"/>
 
 
 

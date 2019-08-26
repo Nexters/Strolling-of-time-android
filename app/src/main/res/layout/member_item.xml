@@ -51,8 +51,8 @@ android:orientation="horizontal">
             <!--android:src="@drawable/ic_user"-->
             <!--style="?android:attr/borderlessButtonStyle"-->
             <!--android:background="@android:color/transparent"-->
-            <!--android:layout_below="@id/img_main_groups"-->
-            <!--app:layout_constraintBottom_toBottomOf="@id/img_main_groups"-->
+            <!--android:layout_below="@id/group_card"-->
+            <!--app:layout_constraintBottom_toBottomOf="@id/group_card"-->
             <!--android:layout_marginBottom="0dp"-->
             <!--/>-->
 

@@ -15,6 +15,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.nexters.wiw.strolling_of_time.R;
 
+import org.jetbrains.annotations.Contract;
+import org.jetbrains.annotations.NotNull;
+
 import java.lang.ref.WeakReference;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -31,7 +34,6 @@ public class CerealTimer extends AppCompatActivity {
   private ArcTimerView timerView;
   private float nowDegree = 0;
   private TextView runningPercent;
-  private View cerealTimerStartButton;
 
   // Task에서는 UI를 변경할 수 없으므로 UI 제어를 위한 Handler 사용
   private final NonLeakHandler handler = new NonLeakHandler(this);
@@ -80,16 +82,18 @@ public class CerealTimer extends AppCompatActivity {
     }
   }
 
-  private TimerTask newTimerTask(final float estimateSecond) {
+  @NotNull
+  @Contract("_ -> new")
+  private TimerTask newTimerTask(final long estimateSecond) {
     return new TimerTask() {
       @Override
       public void run() { // millisecond 단위로 움직임
         final float MAX_DEGREE = 360;
-        runningTime++;
+        runningTime+=10;
         // 총 걸리는 시간 설정
         nowDegree += (MAX_DEGREE / estimateSecond);
         Bundle data = new Bundle();
-        percentage = (int)((runningTime / estimateSecond) * 100);
+        percentage = (int)((runningTime / estimateSecond) * 10);
 
         if(nowDegree > MAX_DEGREE) {
           Log.d("", "시간 완료: " + runningCount++);
@@ -130,24 +134,19 @@ public class CerealTimer extends AppCompatActivity {
   }
 
   private void initCerealTimer() {
-
     timerView = findViewById(R.id.timerView);
     timerView.initialize();
-    View cerealTimerBackground = findViewById(R.id.cereal_timer_background);
 
-    cerealTimerStartButton = findViewById(R.id.cereal_timer);
-    Button pauseButton = findViewById(R.id.cereal_timer_pause);
-
-    TextView estimateLabel = findViewById(R.id.cereal_timer_estimate_time_label);
-
-    estimateTime = findViewById(R.id.cereal_timer_estimate_time);
-
-    TextView readyText = findViewById(R.id.tv_ready);
-
-
-    runningPercent = findViewById(R.id.tv_running_percent);
+    View cerealTimerStartButton = findViewById(R.id.cereal_timer);
 
     totalRunningTime = findViewById(R.id.tv_total_running_time);
+    estimateTime = findViewById(R.id.cereal_timer_estimate_time);
+    runningPercent = findViewById(R.id.tv_running_percent);
+
+    View cerealTimerBackground = findViewById(R.id.cereal_timer_background);
+    Button pauseButton = findViewById(R.id.cereal_timer_pause);
+    TextView estimateLabel = findViewById(R.id.cereal_timer_estimate_time_label);
+    TextView readyText = findViewById(R.id.tv_ready);
     TextView percentMark = findViewById(R.id.percent_mark);
 
     cerealTimerStartButton.setOnClickListener(v -> {
@@ -197,10 +196,10 @@ public class CerealTimer extends AppCompatActivity {
   }
 
   // 결과에 따라 값 처리하기
-  private void run(final float second) {
+  private void run(final long second) {
     if(task == null) {
-      task = newTimerTask(second*1000);
-      timer.schedule(task, 0, 1);
+      task = newTimerTask(second*100);
+      timer.schedule(task, 0, 10);
     }
   }
 }

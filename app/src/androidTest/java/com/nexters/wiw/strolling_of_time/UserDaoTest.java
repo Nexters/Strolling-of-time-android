@@ -12,6 +12,7 @@ import com.nexters.wiw.strolling_of_time.models.Users;
 import com.nexters.wiw.strolling_of_time.models.UsersDao;
 
 import org.greenrobot.greendao.database.Database;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -29,16 +30,22 @@ import static org.junit.Assert.*;
 @RunWith(AndroidJUnit4.class)
 public class UserDaoTest {
 
+  Database db;
+  DaoSession session;
   Context mMockContext;
   UsersDao usersDao;
   @Before
   public void setUp() {
     mMockContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
     DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(mMockContext, "test_encrypted");  // 데이터베이스 암호화
-    Database db = helper.getEncryptedWritableDb("imdeo123!!");
-    DaoSession session = new DaoMaster(db).newSession();
+    db = helper.getEncryptedWritableDb("imdeo123!!");
+    session = new DaoMaster(db).newSession();
     usersDao = session.getUsersDao();
-
+  }
+  @After
+  public void tearDown(){
+    db.close();
+    session.clear();
   }
 
   @Test

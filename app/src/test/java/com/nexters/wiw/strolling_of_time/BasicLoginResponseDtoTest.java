@@ -3,7 +3,7 @@ package com.nexters.wiw.strolling_of_time;
 import org.apache.commons.codec.binary.Base64;
 import org.junit.Test;
 
-public class BasicAuthTest {
+public class BasicLoginResponseDtoTest {
   private String email = "test@test.test";
   private String password = "testtest";
 

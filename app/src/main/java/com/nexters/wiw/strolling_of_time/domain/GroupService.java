@@ -1,9 +1,8 @@
 package com.nexters.wiw.strolling_of_time.domain;
 
+import com.nexters.wiw.strolling_of_time.dto.Group;
 import com.nexters.wiw.strolling_of_time.dto.GroupRequestDto;
 import com.nexters.wiw.strolling_of_time.dto.GroupResponseDto;
-
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.Body;

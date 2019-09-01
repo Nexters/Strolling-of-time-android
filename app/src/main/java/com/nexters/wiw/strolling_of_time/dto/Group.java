@@ -1,6 +1,4 @@
-package com.nexters.wiw.strolling_of_time.domain;
-
-import java.time.LocalDateTime;
+package com.nexters.wiw.strolling_of_time.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

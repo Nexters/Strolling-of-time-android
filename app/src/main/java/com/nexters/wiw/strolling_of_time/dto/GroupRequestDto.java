@@ -1,17 +1,10 @@
 package com.nexters.wiw.strolling_of_time.dto;
 
-import androidx.annotation.Nullable;
 import androidx.annotation.Size;
 
-import java.time.LocalDateTime;
+import lombok.Builder;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-
-@NoArgsConstructor
-@AllArgsConstructor
-@Getter
+@Builder
 public class GroupRequestDto {
 
   private boolean active = true;

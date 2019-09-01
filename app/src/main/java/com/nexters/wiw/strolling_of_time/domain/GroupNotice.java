@@ -21,25 +21,4 @@ public class GroupNotice {
   private long id;
   private String title;
   private long userID;
-//  private long id;
-//
-//  //groupNotice : group (N:1)
-//  private Group group;
-//
-//  //groupNotice : user (N:1)
-//  private User user;
-//
-//  private String title;
-//
-//  private String content;
-//
-//  private LocalDateTime created;
-//
-//  public GroupNotice update(GroupNotice groupNotice) {
-//    this.title = groupNotice.getTitle();
-//    this.content = groupNotice.getContent();
-//    this.created = groupNotice.getCreated();
-//
-//    return this;
-//  }
 }

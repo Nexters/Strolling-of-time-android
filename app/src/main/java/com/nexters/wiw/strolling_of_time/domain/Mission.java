@@ -1,5 +1,7 @@
 package com.nexters.wiw.strolling_of_time.domain;
 
+import com.nexters.wiw.strolling_of_time.dto.Group;
+
 import java.time.LocalDateTime;
 
 import lombok.Builder;

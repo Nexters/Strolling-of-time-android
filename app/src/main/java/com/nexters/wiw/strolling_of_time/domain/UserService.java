@@ -1,7 +1,9 @@
 package com.nexters.wiw.strolling_of_time.domain;
 
-import com.nexters.wiw.strolling_of_time.dto.UserRequestDto;
-import com.nexters.wiw.strolling_of_time.dto.UserResponseDto;
+import com.nexters.wiw.strolling_of_time.dto.UserModifyRequestDto;
+import com.nexters.wiw.strolling_of_time.dto.UserSearchResponseDto;
+import com.nexters.wiw.strolling_of_time.dto.SignUpRequestDto;
+import com.nexters.wiw.strolling_of_time.dto.SignUpResponseDto;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -16,29 +18,30 @@ import retrofit2.http.Query;
 
 public interface UserService {
   @GET("users")
-  Call<UserResponseDto> getUsers(
+  Call<UserSearchResponseDto> getUsers(
           @Header("Authorization") String jwt,
-          @Query("query") String query
+          @Query("email") String email,
+          @Query("nickname") String nickName
   );
 
   @Headers("Content-Type: application/json")
   @POST("users")
-  Call<User> signUp(@Body UserRequestDto user);
+  Call<SignUpResponseDto> signUp(@Body SignUpRequestDto user);
 
   @GET("users/{id}")
-  Call<User> getUserById(
+  Call<SignUpResponseDto> getUserById(
           @Header("Authorization") String jwt,
-          @Path("id") Long id);
+          @Path("id") long id);
 
   @DELETE("users/{id}")
   Call<Void> deleteUserById(
           @Header("Authorization") String jwt,
-          @Path("id") Long id);
+          @Path("id") long id);
 
   @Headers("Content-Type: application/json")
   @PATCH("users/{id}")
-  Call<User> patchUser(
+  Call<SignUpResponseDto> patchUser(
           @Header("Authorization") String jwt,
-          @Path("id") Long id,
-          @Body UserRequestDto user);
+          @Path("id") long id,
+          @Body UserModifyRequestDto user);
 }

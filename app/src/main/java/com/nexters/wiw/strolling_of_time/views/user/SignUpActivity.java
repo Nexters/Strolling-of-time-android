@@ -12,9 +12,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.nexters.wiw.strolling_of_time.BuildConfig;
 import com.nexters.wiw.strolling_of_time.ProgressDialog;
 import com.nexters.wiw.strolling_of_time.R;
-import com.nexters.wiw.strolling_of_time.domain.User;
 import com.nexters.wiw.strolling_of_time.domain.UserService;
-import com.nexters.wiw.strolling_of_time.dto.UserRequestDto;
+import com.nexters.wiw.strolling_of_time.dto.SignUpRequestDto;
+import com.nexters.wiw.strolling_of_time.dto.SignUpResponseDto;
 import com.nexters.wiw.strolling_of_time.views.main.MainActivity;
 
 import org.jetbrains.annotations.NotNull;
@@ -74,14 +74,14 @@ public class SignUpActivity extends AppCompatActivity {
         String password = editTextPassword.getText().toString().trim();
         String nickname = editTextNickname.getText().toString().trim();
 
-        UserRequestDto userRequestDto = new UserRequestDto(
+        SignUpRequestDto signUpRequestDto = new SignUpRequestDto(
                 email, password, nickname, "");
-        Call<User> result = service.signUp(userRequestDto);
+        Call<SignUpResponseDto> result = service.signUp(signUpRequestDto);
 
         Intent main = new Intent(this, MainActivity.class);
-        result.enqueue(new Callback<User>() {
+        result.enqueue(new Callback<SignUpResponseDto>() {
             @Override
-            public void onResponse(@NotNull Call<User> call, @NotNull Response<User> response) {
+            public void onResponse(@NotNull Call<SignUpResponseDto> call, @NotNull Response<SignUpResponseDto> response) {
                 if(response.isSuccessful()) {
                     startActivity(main);
                 } else {
@@ -91,7 +91,7 @@ public class SignUpActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(@NotNull Call<User> call, @NotNull Throwable t) {
+            public void onFailure(@NotNull Call<SignUpResponseDto> call, @NotNull Throwable t) {
                 Log.d(this.getClass().getSimpleName(), "onFailure: " + t.getMessage());
                 progressDialog.dismiss();
                 submit.setClickable(true);

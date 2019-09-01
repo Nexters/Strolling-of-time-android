@@ -1,6 +1,8 @@
 package com.nexters.wiw.strolling_of_time.domain;
 
 
+import com.nexters.wiw.strolling_of_time.dto.Group;
+
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

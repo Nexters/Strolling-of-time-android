@@ -3,7 +3,9 @@ package com.nexters.wiw.strolling_of_time.dto;
 import androidx.annotation.NonNull;
 import androidx.annotation.Size;
 
-public class UserRequestDto {
+import lombok.Builder;
+
+public class SignUpRequestDto {
 
   private String nickname;
 
@@ -13,7 +15,8 @@ public class UserRequestDto {
 
   private String profileImage;
 
-  public UserRequestDto(
+  @Builder
+  public SignUpRequestDto(
           @NonNull String email, @Size(min = 8, max = 15) String password,
           @NonNull String nickname, String profileImage){
     this.email = email;

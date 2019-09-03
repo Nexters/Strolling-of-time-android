@@ -36,4 +36,5 @@ abstract class RetrofitResponseMixin {
                 .map(SignUpResponseDto::getId)
                 .orElseThrow(Exception::new);
     }
+
 }

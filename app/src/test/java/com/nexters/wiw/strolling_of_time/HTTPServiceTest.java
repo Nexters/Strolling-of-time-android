@@ -1,7 +1,9 @@
 package com.nexters.wiw.strolling_of_time;
 
 import com.nexters.wiw.strolling_of_time.domain.GroupService;
+import com.nexters.wiw.strolling_of_time.dto.GroupPageResponseDto;
 import com.nexters.wiw.strolling_of_time.dto.GroupRequestDto;
+import com.nexters.wiw.strolling_of_time.dto.GroupResponseDto;
 import com.nexters.wiw.strolling_of_time.dto.LoginRequestDto;
 import com.nexters.wiw.strolling_of_time.dto.LoginResponseDto;
 import com.nexters.wiw.strolling_of_time.domain.AuthService;
@@ -10,9 +12,7 @@ import com.nexters.wiw.strolling_of_time.dto.UserModifyRequestDto;
 import com.nexters.wiw.strolling_of_time.dto.SignUpRequestDto;
 import com.nexters.wiw.strolling_of_time.dto.SignUpResponseDto;
 
-import org.junit.After;
 import org.junit.AfterClass;
-import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
@@ -70,7 +70,7 @@ public final class HTTPServiceTest extends RetrofitResponseMixin {
     }
 
     @Test
-    public void A_UserServiceRequest_기능테스트() throws Throwable {
+    public void UserServiceRequest_기능테스트() throws Throwable {
         UserModifyRequestDto updateRequestDto = UserModifyRequestDto.builder()
                 .nickname("modify" + TestConstants.NICKNAME)
                 .password("modify" + TestConstants.PASSWORD)
@@ -82,18 +82,52 @@ public final class HTTPServiceTest extends RetrofitResponseMixin {
         printResponseDetail(userModifyResponse);
     }
 
-//    @Test
-//    public void B_GroupServiceRequest_기능테스트() throws Throwable {
-//        System.out.println(tokenHeader + ":" + userIdPathVariable);
-//        GroupRequestDto groupRequestDto = GroupRequestDto.builder()
-//                .active(TestConstants.ACTIVE)
-//                .backgroundImage(TestConstants.BACKGROUNDIMAGE)
-//                .category(TestConstants.CATEGORY)
-//                .description(TestConstants.DESCRIPTION)
-//                .memberLimit(TestConstants.MEMBERLIMIT)
-//                .created(TestConstants.CREATED)
-//                .name(TestConstants.NAME)
-//                .profileImage(TestConstants.PROFILEIMAGE)
-//                .build();
-//    }
+    @Test
+    public void GroupServiceRequest_기능테스트() throws Throwable {
+        GroupRequestDto groupRequestDto = GroupRequestDto.builder()
+                .active(TestConstants.ACTIVE)
+                .backgroundImage(TestConstants.BACKGROUNDIMAGE)
+                .category(TestConstants.CATEGORY)
+                .description(TestConstants.DESCRIPTION)
+                .memberLimit(TestConstants.MEMBERLIMIT)
+                .created(TestConstants.CREATED)
+                .name(TestConstants.NAME)
+                .profileImage(TestConstants.PROFILEIMAGE)
+                .build();
+        Call<GroupResponseDto> groupCreateRequest = groupService.createGroup(tokenHeader, groupRequestDto);
+        Response<GroupResponseDto> groupCreateResponse = groupCreateRequest.execute();
+        printResponseDetail(groupCreateResponse);
+
+        long groupId = Optional.of(groupCreateResponse)
+                .filter(Response::isSuccessful)
+                .map(Response::body)
+                .map(GroupResponseDto::getId)
+                .orElseThrow(Exception::new);
+
+        Call<GroupResponseDto> getGroupRequest = groupService.getGroup(tokenHeader, groupId);
+        Response<GroupResponseDto> getGroupResponse = getGroupRequest.execute();
+        printResponseDetail(getGroupResponse);
+
+        Call<GroupPageResponseDto> getGroupsRequest = groupService.getGroups(tokenHeader, null, null, 0, null);
+        Response<GroupPageResponseDto> getGroupsResponse = getGroupsRequest.execute();
+        printResponseDetail(getGroupsResponse);
+
+        GroupRequestDto groupModifyDto = GroupRequestDto.builder()
+                .active(TestConstants.ACTIVE)
+                .backgroundImage("Modify"+TestConstants.BACKGROUNDIMAGE)
+                .category("Modify"+TestConstants.CATEGORY)
+                .description("Modify"+TestConstants.DESCRIPTION)
+                .memberLimit(TestConstants.MEMBERLIMIT+1)
+                .created(TestConstants.CREATED)
+                .name("Modify"+TestConstants.NAME)
+                .profileImage("Modify"+TestConstants.PROFILEIMAGE)
+                .build();
+        Call<GroupResponseDto> groupPatchRequest = groupService.patchGroup(tokenHeader, groupModifyDto, groupId);
+        Response<GroupResponseDto> groupModifyResponse = groupPatchRequest.execute();
+        printResponseDetail(groupModifyResponse);
+
+        Call<Void> groupDeleteRequest = groupService.deleteGroup(tokenHeader, groupId);
+        Response<Void> groupDeleteResponse = groupDeleteRequest.execute();
+        printResponseDetail(groupDeleteResponse);
+    }
 }

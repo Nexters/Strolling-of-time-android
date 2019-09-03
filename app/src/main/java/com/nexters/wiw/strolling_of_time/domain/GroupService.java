@@ -1,6 +1,7 @@
 package com.nexters.wiw.strolling_of_time.domain;
 
 import com.nexters.wiw.strolling_of_time.dto.Group;
+import com.nexters.wiw.strolling_of_time.dto.GroupPageResponseDto;
 import com.nexters.wiw.strolling_of_time.dto.GroupRequestDto;
 import com.nexters.wiw.strolling_of_time.dto.GroupResponseDto;
 
@@ -17,7 +18,7 @@ import retrofit2.http.Query;
 
 public interface GroupService {
   @GET("groups")
-  Call<GroupResponseDto> getGroups(
+  Call<GroupPageResponseDto> getGroups(
           @Header("Authorization") String auth,
           @Query("category") String category,
           @Query("name") String name,
@@ -26,14 +27,14 @@ public interface GroupService {
   );
 
   @GET("groups/{id}")
-  Call<Group> getGroup(
+  Call<GroupResponseDto> getGroup(
           @Header("Authorization") String auth,
           @Path("id") Long id
   );
 
   @Headers("Content-Type: application/json")
   @POST("groups")
-  Call<Group> createGroup(
+  Call<GroupResponseDto> createGroup(
           @Header("Authorization") String auth,
           @Body GroupRequestDto group
   );
@@ -45,7 +46,7 @@ public interface GroupService {
   );
 
   @PATCH("groups/{id}")
-  Call<Group> patchGroup(
+  Call<GroupResponseDto> patchGroup(
           @Header("Authorization") String auth,
           @Body GroupRequestDto group,
           @Path("id") Long id

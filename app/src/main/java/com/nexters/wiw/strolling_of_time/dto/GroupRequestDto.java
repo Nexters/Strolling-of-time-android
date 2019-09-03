@@ -6,22 +6,14 @@ import lombok.Builder;
 
 @Builder
 public class GroupRequestDto {
-
-  private boolean active = true;
-
+  private boolean active;
   private String backgroundImage;
-
   private String category;
-
   @Size(min = 1, max = 100)
   private String description;
-
-  private long memberLimit = 6;
-
+  private long memberLimit;
   private String created;
-
   @Size(min = 1, max = 45)
   private String name;
-
   private String profileImage;
 }
